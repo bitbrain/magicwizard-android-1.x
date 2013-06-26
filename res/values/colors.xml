@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="description">#999999</color>
+    <color name="caption">#95ba32</color>
+    <color name="version">#ffffff</color>
+    <color name="background">#050505</color>
+    
+    <color name="life_very_much">#5ba8ff</color>
+    <color name="life_much">#00c0ff</color>
+    <color name="life_full">#97c42b</color>
+    <color name="life_medium">#ecc718</color>
+    <color name="life_low">#ab1800</color>
+    <color name="poison">#941e5c</color>
+    <color name="poison_low">#8400ff</color>
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+    	android:title="@string/tx_general_settings">
+    	
+        <EditTextPreference
+    		android:key="set_life_points"
+        	android:title="@string/cb_settings_default_lifepoints"
+        	android:summary="@string/cb_settings_default_lifepoints_summary"
+        	android:defaultValue="20"
+        	android:inputType="number"
+    	/>
+    	
+        <CheckBoxPreference
+    		android:key="enable_two_player_mode"
+        	android:title="@string/cb_settings_enable_two_player_mode"
+        	android:summary="@string/cb_settings_enable_two_player_mode_summary"
+        	android:defaultValue="false"
+    	/>
+    	
+    	<CheckBoxPreference
+    		android:key="disable_screen_lock"
+        	android:title="@string/cb_settings_disable_screen_lock"
+        	android:summary="@string/cb_settings_disable_screen_lock_summary"
+        	android:defaultValue="true"
+    	/>
+    	
+    	
+    </PreferenceCategory>
+    	
+</PreferenceScreen>

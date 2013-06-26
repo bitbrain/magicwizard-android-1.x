@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" 
+    android:paddingTop="8dip" 
+    android:paddingLeft="8dip">
+    <TextView
+              android:text="@string/tx_dices_main"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:padding="10dip"
+              android:lineSpacingExtra="5dip"
+              android:textSize="22dip"
+              android:shadowDy="2"
+              android:shadowRadius="2"
+              android:shadowColor="#000000"
+              android:textColor="@color/caption"
+              android:textColorHighlight="#ffffff" 
+              android:textStyle="bold"
+                           
+              />
+</LinearLayout>

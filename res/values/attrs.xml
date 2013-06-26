@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FlipLayout">
+        <attr name="flipped" format="boolean"/>
+    </declare-styleable>
+    
+    <declare-styleable name="DiceView">
+        <attr name="eyeCount" format="integer"/>        
+    </declare-styleable>
+</resources>

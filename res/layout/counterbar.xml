@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <ImageButton
+        android:id="@+id/btn_count_left"
+        android:layout_width="70dip"
+        android:layout_height="fill_parent"
+        android:background="@drawable/darkbutton"
+        android:contentDescription="@string/sf_ok"
+        android:src="@drawable/ico_minus" />
+
+    <myreality.development.magicwizard.widgets.ValueBar
+        android:id="@+id/vb_value"
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0" />
+
+    <ImageButton
+        android:id="@+id/btn_count_right"
+        android:layout_width="70dip"
+        android:layout_height="fill_parent"
+        android:background="@drawable/darkbutton"
+        android:contentDescription="@string/sf_ok"
+        android:src="@drawable/ico_plus" />
+
+</LinearLayout>

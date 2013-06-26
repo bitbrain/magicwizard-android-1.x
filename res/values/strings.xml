@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- Anwendungsspezifische Zeichenketten -->
+    
+    <string name="app_name">Magic Wizard</string>
+    <string name="app_version">1.1.1</string>
+    <string name="app_description">Dies ist eine Anwendung zum Zählen von Lebenspunkten sowie Legen von Giftmarken auf bestimmte Spieler in dem Spiel \"Magic - The Gathering\".\n
+                                   \nDieses Programm wurde von Miguel Gonzalez entwickelt und programmiert.\n
+                                   \n</string>
+    <string name="app_year">2013</string>
+    <string name="app_author">Miguel Gonzalez</string>
+    <string name="txt_version">Version</string>
+    
+    <!-- Menu-Zeichenketten -->    
+    <string name="opt_reset">Neu starten</string>
+    <string name="opt_preferences">Einstellungen</string>
+    <string name="opt_info">Information</string>
+    <string name="opt_warning">Achtung!</string>    
+    <string name="txt_reset">Reset</string>
+    <string name="txt_menu">Menü</string>
+    <string name="txt_dice">Wuerfel</string>
+    <string name="txt_quit">Ende</string>
+    <string name="tx_register">Registrieren</string>
+    <string name="tx_sign_in">Anmelden</string>
+    
+    <!-- Schaltflaechen -->
+    
+    <string name="sf_ok">OK</string>
+    <string name="sf_abort">Abbrechen</string>
+    
+    <!-- TextViews und Captions -->
+    
+    <string name="tx_general_settings">Allgemeine Einstellungen</string>
+    <string name="tx_lifecounter_caption">Lebenspunkte</string>
+    <string name="tx_description_username">Benutzername</string>
+    <string name="tx_description_password">Passwort</string>
+    <string name="tx_description_re_password">Passwort wiederholen</string>
+    <string name="tx_description_register">Noch nicht dabei?</string>
+      
+    <!-- Layoutspezifische Texte -->
+    <string name="tx_message_reset">Sämtlicher Verlauf und Lebenspunkte werden zurückgesetzt.</string>    
+    <string name="tx_time">Zeit</string>
+    
+    <!-- Wuerfel -->
+  	<string name="tx_dices_result">Ergebnis</string>
+  	
+  	<!-- Preferences -->
+  	<string name="tx_settings_player1_name">Spielername</string>
+  	<string name="tx_settings_player1_name_summary">Name des aktuellen Spielers</string>
+    <string name="tx_settings_player2_name">Name des Gegners</string>
+    <string name="tx_settings_player2_name_summary">Name des aktuellen Gegners</string>
+    <string name="cb_settings_disable_screen_lock">Kein Display-Timeout</string>
+    <string name="cb_settings_disable_screen_lock_summary">Verhindern, dass sich der Bildschirm ausschaltet.</string>
+    <string name="cb_settings_enable_two_player_mode">2-Spieler Modus</string>
+    <string name="cb_settings_enable_two_player_mode_summary">Nutzen der App für zwei Spieler</string>
+    <string name="cb_settings_default_lifepoints">Lebenspunkte</string>
+    <string name="cb_settings_default_lifepoints_summary">Legt die Standardanzahl an Lebenspunkten fest</string>
+  	
+  	 
+</resources>

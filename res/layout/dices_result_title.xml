@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingLeft="8dip"
+    android:paddingTop="8dip" >
+
+    <TextView
+        android:id="@+id/tx_dice_caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineSpacingExtra="5dip"
+        android:padding="10dip"
+        android:shadowColor="#000000"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="@string/tx_dices_result"
+        android:textColor="@color/caption"
+        android:textColorHighlight="#ffffff"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

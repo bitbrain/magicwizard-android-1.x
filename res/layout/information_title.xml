@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingLeft="8dip"
+    android:paddingTop="8dip" >
+
+    <TextView
+        android:id="@+id/tx_info_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="5dip"
+        android:padding="10dip"
+        android:shadowColor="#000000"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="@string/app_name"
+        android:textColor="@color/caption"
+        android:textColorHighlight="#ffffff"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tx_info_version_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="5dip"
+        android:shadowColor="#000000"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="@string/txt_version"
+        android:textColor="@color/version"
+        android:textColorHighlight="#ffffff"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tx_info_version_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="5dip"
+        android:paddingLeft="4dip"
+        android:shadowColor="#000000"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="@string/app_version"
+        android:textColor="@color/version"
+        android:textColorHighlight="#ffffff"
+        android:textSize="16sp" />
+
+</LinearLayout>

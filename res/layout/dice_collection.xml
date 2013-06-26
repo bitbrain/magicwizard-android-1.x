@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/myreality.development.magicwizard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="17dip"
+    android:weightSum="4" >
+
+    <myreality.development.magicwizard.widgets.DiceView
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="17dip"
+        android:layout_weight="1"
+        custom:eyeCount="6" />
+
+    <myreality.development.magicwizard.widgets.DiceView
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="17dip"
+        android:layout_weight="1"
+        custom:eyeCount="10" />
+
+    <myreality.development.magicwizard.widgets.DiceView
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="17dip"
+        android:layout_weight="1"
+        custom:eyeCount="20" />
+
+    <myreality.development.magicwizard.widgets.DiceView
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        custom:eyeCount="30" />
+
+</LinearLayout>

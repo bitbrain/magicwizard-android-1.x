@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_horizontal"
+    android:orientation="horizontal"
+    android:baselineAligned="false" >
+    
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    xmlns:custom="http://schemas.android.com/apk/res/myreality.development.magicwizard"
+	    android:layout_width="wrap_content"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:padding="17dip"
+	    android:weightSum="4"
+	    android:background="@color/background" >
+	
+	    <myreality.development.magicwizard.widgets.DiceView
+	        android:layout_width="wrap_content"
+	        android:layout_height="0dip"
+	        android:layout_weight="1"
+	        custom:eyeCount="6" />
+	
+	    <myreality.development.magicwizard.widgets.DiceView
+	        android:layout_width="wrap_content"
+	        android:layout_height="0dip"
+	        android:layout_weight="1"
+	        custom:eyeCount="10" />
+	
+	    <myreality.development.magicwizard.widgets.DiceView
+	        android:layout_width="wrap_content"
+	        android:layout_height="0dip"
+	        android:layout_weight="1"
+	        custom:eyeCount="20" />
+	
+	    <myreality.development.magicwizard.widgets.DiceView
+	        android:layout_width="wrap_content"
+	        android:layout_height="0dip"
+	        android:layout_weight="1"
+	        custom:eyeCount="30" />
+	
+	</LinearLayout>
+    
+    
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dip"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:layout_weight="1"
+	    >
+		<myreality.development.magicwizard.widgets.LifeBar
+		    android:id="@+id/bar_life1"
+	        android:layout_width="fill_parent"
+	        android:layout_height="0dip"
+	        android:layout_marginLeft="8dip"
+	        android:layout_marginRight="8dip"
+	        android:layout_marginTop="8dip"
+	        android:layout_weight="3" />
+	
+	    <myreality.development.magicwizard.widgets.PoisonBar
+	        android:id="@+id/bar_poison1"
+	        android:layout_width="fill_parent"
+	        android:layout_height="0dip"
+	        android:layout_margin="8dip"
+	        android:layout_weight="2.5" />
+
+	</LinearLayout>
+		<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="70dip"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        <ImageButton
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:id="@+id/btn_close"
+            android:contentDescription="@string/app_description" 
+            android:src="@drawable/ico_quit"
+            android:onClick="onButtonClick"
+            android:background="@drawable/darkbutton"
+        />
+        <ImageButton
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:id="@+id/btn_rate"
+            android:contentDescription="@string/app_description" 
+            android:src="@drawable/ico_rate"
+            android:onClick="onButtonClick"
+            android:background="@drawable/darkbutton"
+        />
+        <ImageButton
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:id="@+id/btn_info"
+            android:contentDescription="@string/app_description" 
+            android:src="@drawable/ico_info"
+            android:onClick="onButtonClick"
+            android:background="@drawable/darkbutton"
+        />
+         
+         <ImageButton
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:id="@+id/btn_reset"
+            android:contentDescription="@string/app_description" 
+            android:src="@drawable/ico_reset"
+            android:onClick="onButtonClick"
+            android:background="@drawable/darkbutton"
+        />
+         <ImageButton
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:id="@+id/btn_preferences"
+            android:contentDescription="@string/app_description" 
+            android:src="@drawable/ico_preferences"
+            android:onClick="onButtonClick"
+            android:background="@drawable/darkbutton"
+        />
+    </LinearLayout>
+</LinearLayout>

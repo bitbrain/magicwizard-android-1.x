@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+   
+    <item
+    	android:id="@+id/opt_preferences"
+    	android:title="@string/opt_preferences"	
+    	android:icon="@android:drawable/ic_menu_preferences"
+    />
+    
+    <item
+    	android:id="@+id/opt_information"
+    	android:title="@string/opt_info"	
+    	android:icon="@android:drawable/ic_menu_help"
+    />
+
+</menu>
