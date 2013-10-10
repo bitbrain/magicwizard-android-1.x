@@ -7,6 +7,12 @@
     android:orientation="horizontal"
     android:baselineAligned="false" >
     <!--
+    
+    Same here, a few small changes in the layout to make 
+    it more suitable for two players. Even though the 
+    interface here was not as bad as in the vertical layout, 
+    I still needed to change a few things.
+    
      -->
     
     
