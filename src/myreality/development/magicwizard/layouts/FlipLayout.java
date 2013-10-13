@@ -12,7 +12,8 @@ import android.widget.LinearLayout;
 public class FlipLayout extends LinearLayout {
 	
 	private boolean isMirroring = false;
-    private Handler handler;
+    @SuppressWarnings("unused")
+	private Handler handler;
 
 
 	public FlipLayout(Context context, AttributeSet attrs) {
