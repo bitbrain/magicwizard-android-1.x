@@ -8,10 +8,8 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.PopupMenu;
 import android.widget.PopupMenu.OnMenuItemClickListener;
 import android.widget.TextView;
@@ -23,7 +21,7 @@ import android.widget.TextView;
  * @version 1.1
  * @since 1.0
  */
-public class MainActivity extends MagicActivity {
+public class MainActivity extends MagicActivity implements OnMenuItemClickListener {
 
 	// Target bundle to save data with
 	private Bundle bundle;
@@ -58,7 +56,11 @@ public class MainActivity extends MagicActivity {
 			reset();
 			break;
 		case R.id.btn_preferences:
-			showPreferences();
+			if (isSinglePlayerMode()) {
+				showPreferences();
+			} else {
+				showMenuPopup(view);
+			}
 			break;
 		case R.id.btn_info:
 			showAppInfo();
@@ -182,35 +184,35 @@ public class MainActivity extends MagicActivity {
 		this.bundle = outState;
 		saveToBundle(outState);
 	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-
-		getMenuInflater().inflate(R.menu.life_counter_menu, menu);
-		return super.onCreateOptionsMenu(menu);
+	
+	public void showMenuPopup(View view) {
+		PopupMenu popupMenu = new PopupMenu(MainActivity.this, view);
+	      popupMenu.getMenuInflater().inflate(R.menu.main_menu, popupMenu.getMenu());
+	    
+	      popupMenu.setOnMenuItemClickListener((OnMenuItemClickListener) this);
+	    
+	      popupMenu.show();
 	}
 
 	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-
-		Builder builder = null;
+	public boolean onMenuItemClick(MenuItem item) {
 
 		switch (item.getItemId()) {
-		case R.id.opt_reset:
-			reset();
-			break;
-		case R.id.opt_preferences:
-			Intent intent = new Intent(this, Preferences.class);
-			startActivity(intent);
-			break;
-		case R.id.opt_information:
-			builder = new Builder(this);
-			builder.setView(
-					getLayoutInflater().inflate(R.layout.information, null))
-					.setTitle(R.string.opt_info)
-					.setIcon(android.R.drawable.ic_dialog_info)
-					.setPositiveButton(R.string.sf_ok, null).show();
-			break;
+			case R.id.opt_reset:
+				reset();
+				break;
+			case R.id.opt_preferences:
+				showPreferences();
+				break;
+			case R.id.opt_information:
+				showAppInfo();
+				break;
+			case R.id.opt_rate:
+				rateApp();
+				break;
+			case R.id.opt_close:
+				finish();
+				break;
 		}
 
 		return super.onOptionsItemSelected(item);
