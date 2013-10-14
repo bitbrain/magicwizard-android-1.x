@@ -6,60 +6,12 @@
     android:background="@drawable/background_horizontal"
     android:orientation="horizontal"
     android:baselineAligned="false" >
-    <!--
     
-    Same here, a few small changes in the layout to make 
-    it more suitable for two players. Even though the 
-    interface here was not as bad as in the vertical layout, 
-    I still needed to change a few things.
-    
-     -->
-    
-    
-	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="0dip"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" 
-    android:layout_weight="1"
-	    >	    	
-	    <myreality.development.magicwizard.widgets.PoisonBar
-	        android:id="@+id/bar_poison2"
-	        android:layout_width="fill_parent"
-	        android:layout_height="0dip"
-	        android:layout_margin="8dip"
-	        android:layout_weight="2.5"
-	        custom:flipped="true" />
-	    
-	    <myreality.development.magicwizard.widgets.LifeBar
-	        android:id="@+id/bar_life2"
-	        android:layout_width="fill_parent"
-	        android:layout_height="0dip"
-	        android:layout_marginLeft="8dip"
-	        android:layout_marginRight="8dip"
-	        android:layout_weight="3"
-	        custom:flipped="true" />
-
-		<myreality.development.magicwizard.widgets.LifeBar
-		    android:id="@+id/bar_life1"
-	        android:layout_width="fill_parent"
-	        android:layout_height="0dip"
-	        android:layout_marginLeft="8dip"
-	        android:layout_marginRight="8dip"
-	        android:layout_marginTop="8dip"
-	        android:layout_weight="3" />
-	
-	    <myreality.development.magicwizard.widgets.PoisonBar
-	        android:id="@+id/bar_poison1"
-	        android:layout_width="fill_parent"
-	        android:layout_height="0dip"
-	        android:layout_margin="8dip"
-	        android:layout_weight="2.5" />
-
-	</LinearLayout>
-	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"	    
-	    android:layout_width="70dip"
+    <LinearLayout    
+	    android:layout_width="wrap_content"
 	    android:layout_height="fill_parent"
 	    android:orientation="vertical"
+	    android:padding="17dip"
 	    android:weightSum="4"
 	    android:background="@color/background" >
 	
@@ -88,8 +40,50 @@
 	        custom:eyeCount="30" />
 	
 	</LinearLayout>
+    
+    
 	<LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dip"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:layout_weight="1"
+	    >	    	
+	    <myreality.development.magicwizard.widgets.PoisonBar
+	        android:id="@+id/bar_poison2"
+	        android:layout_width="fill_parent"
+	        android:layout_height="0dip"
+	        android:layout_margin="8dip"
+	        android:layout_weight="2.5"
+	        custom:flipped="true" />
+	    
+	    <myreality.development.magicwizard.widgets.LifeBar
+	        android:id="@+id/bar_life2"
+	        android:layout_width="fill_parent"
+	        android:layout_height="0dip"
+	        android:layout_marginLeft="8dip"
+	        android:layout_marginRight="8dip"
+	        android:layout_marginTop="8dip"
+	        android:layout_weight="3"
+	        custom:flipped="true" />
+
+		<myreality.development.magicwizard.widgets.LifeBar
+		    android:id="@+id/bar_life1"
+	        android:layout_width="fill_parent"
+	        android:layout_height="0dip"
+	        android:layout_marginLeft="8dip"
+	        android:layout_marginRight="8dip"
+	        android:layout_marginTop="8dip"
+	        android:layout_weight="3" />
+	
+	    <myreality.development.magicwizard.widgets.PoisonBar
+	        android:id="@+id/bar_poison1"
+	        android:layout_width="fill_parent"
+	        android:layout_height="0dip"
+	        android:layout_margin="8dip"
+	        android:layout_weight="2.5" />
+
+	</LinearLayout>
+	<LinearLayout
         android:layout_width="70dip"
         android:layout_height="fill_parent"
         android:orientation="vertical">

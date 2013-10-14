@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.AttributeSet;
-import android.widget.Toast;
 
 public class LifeBar extends CounterBar {
 
