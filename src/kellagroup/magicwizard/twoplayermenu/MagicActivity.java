@@ -1,4 +1,4 @@
-package myreality.development.magicwizard.activities;
+package kellagroup.magicwizard.twoplayermenu;
 
 import java.util.HashSet;
 

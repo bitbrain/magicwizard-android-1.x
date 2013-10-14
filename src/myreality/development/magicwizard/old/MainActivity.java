@@ -168,6 +168,14 @@ public class MainActivity extends MagicActivity {
 			poisonBar = (PoisonBar)findViewById(R.id.cb_poison_p2);
 			lifeBar.reset(this);
 			poisonBar.reset();
+			
+			Button backButton = (Button)this.findViewById(R.id.back);
+			backButton.setOnClickListener(new OnClickListener() {
+  				@Override
+  				public void onClick(View v) {
+    			finish();
+  					}
+				});
 		}
 	}
 	
