@@ -61,10 +61,6 @@ public class LifeBar extends CounterBar {
 	@Override
 	public void minus() {
 		super.minus();
-		if (valueBar.getValue() == 0) {
-			vibrator.vibrate(400);
-			Toast.makeText(getContext(), "Sie haben verloren!", Toast.LENGTH_LONG).show();
-		}
 	}
 
 	@Override

@@ -2,6 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
    
     <item
+    	android:id="@+id/opt_reset"
+    	android:title="@string/opt_reset"	
+    	android:icon="@android:drawable/ic_menu_agenda"
+    />
+    
+    <item
     	android:id="@+id/opt_preferences"
     	android:title="@string/opt_preferences"	
     	android:icon="@android:drawable/ic_menu_preferences"
@@ -13,22 +19,16 @@
     	android:icon="@android:drawable/ic_menu_help"
     />
     
-    <item
-    	android:id="@+id/opt_reset"
-    	android:title="@string/opt_reset"	
-    	android:icon="@android:drawable/ic_menu_agenda"
-    />
-    
     
     <item
     	android:id="@+id/opt_rate"
-    	android:title="@string/opt_info"	
+    	android:title="@string/opt_rate"	
     	android:icon="@android:drawable/ic_menu_agenda"
     />
     
     <item
     	android:id="@+id/opt_close"
-    	android:title="@string/opt_reset"	
+    	android:title="@string/opt_close"	
     	android:icon="@android:drawable/ic_menu_agenda"
     />
 

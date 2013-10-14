@@ -12,6 +12,8 @@
     <string name="opt_preferences">Preferences</string>
     <string name="opt_info">Information</string>
     <string name="opt_warning">Warning!</string>    
+    <string name="opt_rate">Rate app!</string>    
+    <string name="opt_close">Close</string>
     <string name="txt_reset">Reset</string>
     <string name="txt_menu">Menu</string>
     <string name="txt_dice">Dice</string>

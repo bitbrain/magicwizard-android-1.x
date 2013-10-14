@@ -16,7 +16,9 @@
     <string name="opt_reset">Neu starten</string>
     <string name="opt_preferences">Einstellungen</string>
     <string name="opt_info">Information</string>
-    <string name="opt_warning">Achtung!</string>    
+    <string name="opt_warning">Achtung!</string>  
+    <string name="opt_rate">Bewerte die App</string>    
+    <string name="opt_close">Beenden</string>      
     <string name="txt_reset">Reset</string>
     <string name="txt_menu">Menü</string>
     <string name="txt_dice">Wuerfel</string>
