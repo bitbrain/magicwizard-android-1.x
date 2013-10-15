@@ -1,7 +1,11 @@
-magicwizard-android
+MagicWizard for Android
 ---
 
 Android app for "Magic - The Gathering" players in order to count life points.
+
+## Download
+
+You can download the newest version [here](http://magicwizard.my-reality.de).
 
 ## Development
 
@@ -15,7 +19,7 @@ To work on this project, you will need:
 * [Eclipse IDE](http://www.eclipse.org/downloads/) (Indigo preferred)
 * [Android SDK](http://developer.android.com/sdk/index.html) including ADT
 
-Everything complete? Let's go on!
+Everything complete? Then you should know, that you can fork this repository on order to make improvements! Just go on and make a pull request. Maybe it has a chance to get approved!
 
 ### Project Structure
 
@@ -37,3 +41,28 @@ README.md                                 <- Documentation of the software
 ```
 
 ### Getting started
+
+The basic concept of this app is to create components and map them to a specific view. Each view has an own id. Without going into much detail, you can write an own component:
+
+```java
+public class MyComponent implements Component {
+	
+	@Override
+	public void handle(Activity context) {
+		// Do something here with the context!
+	}
+}
+```
+
+Afterwards you have to register your component in the ```MainActivity``` class and map it to a specific input:
+
+```java
+handler.addComponent(R.id.btn_my_action, new MyComponent());
+```
+Now it is possible to call the handler in an action method:
+```java
+public void onAction(View view) {
+	handler.handle(view.getID(), this);
+}
+```
+The handler will process the registered functionality. If the view isn't registered yet, nothing will happen!
