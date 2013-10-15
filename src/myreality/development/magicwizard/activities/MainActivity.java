@@ -29,6 +29,9 @@ public class MainActivity extends MagicActivity {
 	private Typeface typeface;
 
 	private ComponentHandler handler;
+
+	private SlidingMenu menu;
+
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -37,29 +40,35 @@ public class MainActivity extends MagicActivity {
 	@Override
 	protected void onCreate(Bundle bundle) {
 		super.onCreate(bundle);
+		
+		setContentView(R.layout.main);
+
 		// Load the target font from assets
 		handler = new ComponentHandler();
 		typeface = Typeface.createFromAsset(getAssets(), "fonts/fritzbold.ttf");
 		this.bundle = bundle;
-		
+
 		// Inject behavior
-		handler.add(R.id.btn_reset, new ResetComponent());	
+		handler.add(R.id.btn_reset, new ResetComponent());
 		handler.add(R.id.btn_rate, new RateComponent());
 		handler.add(R.id.btn_close, new CloseComponent());
 		handler.add(R.id.btn_info, new InfoComponent(typeface));
 		handler.add(R.id.btn_preferences, new PreferencesComponent());
-		
+
 		reloadPreferences();
 		
-		SlidingMenu menu = new SlidingMenu(this);
-        menu.setMode(SlidingMenu.LEFT);
-        menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
-        menu.setShadowWidthRes(R.dimen.shadow_width);
-        menu.setShadowDrawable(R.drawable.shadow);
-        menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
-        menu.setFadeDegree(0.35f);
-        menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
-        menu.setMenu(R.layout.menu);
+		menu = new SlidingMenu(this);
+		menu.setMode(SlidingMenu.LEFT);
+		menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+		menu.setShadowWidthRes(R.dimen.shadow_width);
+		menu.setShadowDrawable(R.drawable.shadow);
+		menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
+		menu.setFadeDegree(0.35f);
+		menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
+		
+		// TEST Layout! 
+		menu.setMenu(R.layout.main_two_players);
+
 	}
 
 	/**
@@ -73,11 +82,11 @@ public class MainActivity extends MagicActivity {
 	}
 
 	private void reloadPreferences() {
-		clear();
+		//clear();
 		if (isSinglePlayerMode()) {
-			setContentView(R.layout.main);
+			//setContentView(R.layout.main);
 		} else {
-			setContentView(R.layout.main_two_players);
+			//setContentView(R.layout.main_two_players);
 		}
 	}
 

@@ -27,44 +27,14 @@
         custom:flipped="true"
         />
     
-    <!-- 
-    
-    I was unable to find a way to place the button and the dices 
-    side by side without placing them in a RelativeLayout. Also 
-    I don't know if the height of the DiceBar is enough. It fits 
-    on my S3 though. 
-    
-    -->
-    
-	<RelativeLayout android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp">  
-
-	        <myreality.development.magicwizard.widgets.DiceCollection
-	            android:layout_width="wrap_content"
-	            android:layout_height="80dip"
-	            android:layout_alignParentLeft="true"
-	            android:layout_margin="8dip"
-	            android:layout_toLeftOf="@+id/btn_preferences"
-	            android:background="@color/background"
-	            android:gravity="center" >
-
-    		</myreality.development.magicwizard.widgets.DiceCollection>
-
-    		<ImageButton
-    		    android:id="@+id/btn_preferences"
-    		    android:layout_width="wrap_content"
-    		    android:layout_height="80dip"
-    		    android:layout_alignParentRight="true"
-    		    android:layout_margin="8dip"
-    		    android:background="@drawable/darkbutton"
-    		    android:contentDescription="@string/app_description"
-    		    android:onClick="onButtonClick"
-    		    android:src="@drawable/ico_preferences" />
-
-	</RelativeLayout>
-
+     <myreality.development.magicwizard.widgets.DiceCollection
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="8dip"
+        android:background="@color/background"
+        android:gravity="center" />
+     
     <myreality.development.magicwizard.widgets.LifeBar
         android:id="@+id/bar_life1"
         android:layout_width="fill_parent"
