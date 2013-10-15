@@ -1,7 +1,7 @@
 package myreality.development.magicwizard.components;
 
 import myreality.development.magicwizard.util.Resetable;
-import android.content.Context;
+import android.app.Activity;
 
 /**
  * Handles the resetting behavior for context
@@ -14,7 +14,7 @@ import android.content.Context;
 public class ResetComponent implements Component {
 
 	@Override
-	public void handle(Context context) {
+	public void handle(Activity context) {
 		if (context instanceof Resetable) {
 			Resetable resetable = (Resetable)context;
 			resetable.reset();

@@ -1,5 +1,6 @@
 package myreality.development.magicwizard.components;
 
+import android.app.Activity;
 import android.content.Context;
 import android.util.SparseArray;
 
@@ -43,7 +44,7 @@ public final class ComponentHandler {
 	 * @param id
 	 * @param context
 	 */
-	public void handle(Integer id, Context context) {
+	public void handle(Integer id, Activity context) {
 		Component component = components.get(id);
 		
 		if (component != null) {

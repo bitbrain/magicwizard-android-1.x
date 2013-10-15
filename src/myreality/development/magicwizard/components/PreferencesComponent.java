@@ -1,25 +1,24 @@
 package myreality.development.magicwizard.components;
 
+import myreality.development.magicwizard.activities.Preferences;
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 
 /**
- * Handles the rating of this app
+ * Component for displaying the preferences
  * 
  * @author Miguel Gonzalez <miguel-gonzalez@gmx.de>
  * @since 1.2
  * @version 1.2
+ *
  */
-public class RateComponent implements Component {
+public class PreferencesComponent implements Component {
 
 	@Override
 	public void handle(Activity context) {
-		Intent intent = new Intent(Intent.ACTION_VIEW);
-		intent.setData(Uri
-				.parse("market://details?id=myreality.development.magicwizard"));
+		Intent intent = new Intent(context, Preferences.class);
 		context.startActivity(intent);
 	}
 
+	
 }
