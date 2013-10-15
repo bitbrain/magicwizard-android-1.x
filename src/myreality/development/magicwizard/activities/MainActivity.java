@@ -10,6 +10,7 @@ import myreality.development.magicwizard.components.ResetComponent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ListView;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 
@@ -49,17 +50,17 @@ public class MainActivity extends MagicActivity {
 		this.bundle = bundle;
 
 		// Inject behavior
-		handler.add(R.id.btn_reset, new ResetComponent());
-		handler.add(R.id.btn_rate, new RateComponent());
-		handler.add(R.id.btn_close, new CloseComponent());
-		handler.add(R.id.btn_info, new InfoComponent(typeface));
-		handler.add(R.id.btn_preferences, new PreferencesComponent());
+		//handler.add(R.id.btn_reset, new ResetComponent());
+		//handler.add(R.id.btn_rate, new RateComponent());
+		//handler.add(R.id.btn_close, new CloseComponent());
+		//handler.add(R.id.btn_info, new InfoComponent(typeface));
+		//handler.add(R.id.btn_preferences, new PreferencesComponent());
 
 		reloadPreferences();
 		
 		menu = new SlidingMenu(this);
 		menu.setMode(SlidingMenu.LEFT);
-		menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+		menu.setTouchModeAbove(SlidingMenu.LEFT);
 		menu.setShadowWidthRes(R.dimen.shadow_width);
 		menu.setShadowDrawable(R.drawable.shadow);
 		menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
@@ -67,7 +68,10 @@ public class MainActivity extends MagicActivity {
 		menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
 		
 		// TEST Layout! 
-		menu.setMenu(R.layout.main_two_players);
+		menu.setMenu(R.layout.menu);
+		
+		ListView menuList = (ListView) menu.findViewById(R.id.listview);
+		
 
 	}
 

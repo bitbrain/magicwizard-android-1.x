@@ -4,7 +4,7 @@
     <!-- Anwendungsspezifische Zeichenketten -->
     
     <string name="app_name">Magic Wizard</string>
-    <string name="app_version">1.1.2</string>
+    <string name="app_version">1.2</string>
     <string name="app_description">Dies ist eine Anwendung zum Zählen von Lebenspunkten sowie Legen von Giftmarken auf bestimmte Spieler in dem Spiel \"Magic - The Gathering\".\n
                                    \nDieses Programm wurde von Miguel Gonzalez entwickelt und programmiert.\n
                                    \n</string>
