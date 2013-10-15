@@ -320,7 +320,7 @@ public class ValueBar extends View {
 			
 			// Drawing the value
 			drawableBar.setColorFilter(getValueColor(), Mode.MULTIPLY);
-			int newWidth = (int) ((getWidth() - getPaddingRight()) * (float)((float)value / (float)maximumCap));
+			int newWidth = (int) ((getWidth() - getPaddingRight()) * ((float)value / (float)maximumCap));
 			if (newWidth > getWidth()) {
 				newWidth = getWidth();
 			}

@@ -66,12 +66,14 @@ public class CounterBar extends FlipLayout implements Reloadable {
 		// Listener
 		ImageButton btnLeft = (ImageButton) findViewById(R.id.btn_count_left);
 		btnLeft.setOnClickListener(new OnClickListener() {
+			@Override
 			public void onClick(View view) {
 				minus();
 			}			
 		});
 		ImageButton btnRight = (ImageButton) findViewById(R.id.btn_count_right);
 		btnRight.setOnClickListener(new OnClickListener() {
+			@Override
 			public void onClick(View view) {
 				plus();
 			}			
@@ -82,16 +84,19 @@ public class CounterBar extends FlipLayout implements Reloadable {
 		
 	}
 
+	@Override
 	public void onReload(Activity from, boolean reset) {
 		if (reset) {
 			reset(from);		
 		}
 	}
 
+	@Override
 	public void saveToBundle(Bundle bundle) {
 		bundle.putInt(String.valueOf(getId()), getValue());
 	}
 
+	@Override
 	public void loadFromBundle(Bundle bundle) {
 		setValue(bundle.getInt(String.valueOf(getId())));
 	}

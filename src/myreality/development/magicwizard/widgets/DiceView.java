@@ -57,6 +57,7 @@ public class DiceView extends LinearLayout {
 		txEyes.setTypeface(typeface);
 		
 		txEyes.setOnClickListener(new OnClickListener() {
+			@Override
 			public void onClick(View view) {
 				roll(context);
 			}			

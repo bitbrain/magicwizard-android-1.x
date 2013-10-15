@@ -11,6 +11,8 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 
+import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+
 /**
  * Main activity of the application
  * 
@@ -48,7 +50,16 @@ public class MainActivity extends MagicActivity {
 		handler.add(R.id.btn_preferences, new PreferencesComponent());
 		
 		reloadPreferences();
-
+		
+		SlidingMenu menu = new SlidingMenu(this);
+        menu.setMode(SlidingMenu.LEFT);
+        menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+        menu.setShadowWidthRes(R.dimen.shadow_width);
+        menu.setShadowDrawable(R.drawable.shadow);
+        menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
+        menu.setFadeDegree(0.35f);
+        menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
+        menu.setMenu(R.layout.menu);
 	}
 
 	/**

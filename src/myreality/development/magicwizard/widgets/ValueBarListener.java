@@ -15,6 +15,7 @@ public class ValueBarListener implements OnTouchListener {
 	public ValueBarListener(Context context) {
 	}
 
+	@Override
 	public boolean onTouch(final View v, MotionEvent event) {
 		
 		ValueBar bar = (ValueBar) v;

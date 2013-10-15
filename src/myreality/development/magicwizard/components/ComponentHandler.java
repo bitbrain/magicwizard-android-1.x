@@ -1,7 +1,6 @@
 package myreality.development.magicwizard.components;
 
 import android.app.Activity;
-import android.content.Context;
 import android.util.SparseArray;
 
 /**
