@@ -1,7 +1,7 @@
 package myreality.development.magicwizard.activities;
 
 import myreality.development.magicwizard.R;
-import myreality.development.magicwizard.util.Reloadable;
+import myreality.development.magicwizard.components.ComponentHandler;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.Intent;
@@ -29,6 +29,7 @@ public class MainActivity extends MagicActivity implements OnMenuItemClickListen
 	// Typeface TTF font (Fritz bold)
 	private Typeface typeface;
 
+	private ComponentHandler handler;
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -38,6 +39,7 @@ public class MainActivity extends MagicActivity implements OnMenuItemClickListen
 	protected void onCreate(Bundle bundle) {
 		super.onCreate(bundle);
 		// Load the target font from assets
+		handler = new ComponentHandler();
 		typeface = Typeface.createFromAsset(getAssets(), "fonts/fritzbold.ttf");
 		this.bundle = bundle;
 		reloadPreferences();
@@ -51,27 +53,7 @@ public class MainActivity extends MagicActivity implements OnMenuItemClickListen
 	 *            Target button
 	 */
 	public void onButtonClick(View view) {
-		switch (view.getId()) {
-		case R.id.btn_reset:
-			reset();
-			break;
-		case R.id.btn_preferences:
-			if (isSinglePlayerMode()) {
-				showPreferences();
-			} else {
-				showMenuPopup(view);
-			}
-			break;
-		case R.id.btn_info:
-			showAppInfo();
-			break;
-		case R.id.btn_rate:
-			rateApp();
-			break;
-		case R.id.btn_close:
-			finish();
-			break;
-		}
+		handler.handle(view.getId(), this);
 	}
 
 	private void rateApp() {
@@ -113,14 +95,8 @@ public class MainActivity extends MagicActivity implements OnMenuItemClickListen
 		startActivity(intent);
 	}
 
-	private void reset() {
-		for (Reloadable reloadable : reloadables) {
-			reloadable.onReload(this, true);
-		}
-	}
-
 	private void reloadPreferences() {
-		reloadables.clear();
+		clear();
 		if (isSinglePlayerMode()) {
 			setContentView(R.layout.main);
 		} else {
@@ -137,10 +113,8 @@ public class MainActivity extends MagicActivity implements OnMenuItemClickListen
 	protected void onResume() {
 		super.onResume();
 		reloadPreferences();
-		for (Reloadable reloadable : reloadables) {
-			reloadable.onReload(this, true);
-		}
-		loadFromBundle(bundle);
+		reset();
+		load(bundle);
 	}
 
 	/*
@@ -151,7 +125,7 @@ public class MainActivity extends MagicActivity implements OnMenuItemClickListen
 	@Override
 	protected void onPause() {
 		super.onPause();
-		saveToBundle(bundle);
+		save(bundle);
 	}
 
 	@Override
@@ -159,30 +133,14 @@ public class MainActivity extends MagicActivity implements OnMenuItemClickListen
 		super.onRestoreInstanceState(bundle);
 		this.bundle = bundle;
 		reloadPreferences();
-		loadFromBundle(bundle);
-	}
-
-	private void loadFromBundle(Bundle bundle) {
-		if (bundle != null) {
-			for (Reloadable reloadable : reloadables) {
-				reloadable.loadFromBundle(bundle);
-			}
-		}
-	}
-
-	private void saveToBundle(Bundle bundle) {
-		if (bundle != null) {
-			for (Reloadable reloadable : reloadables) {
-				reloadable.saveToBundle(bundle);
-			}
-		}
+		load(bundle);
 	}
 
 	@Override
 	protected void onSaveInstanceState(Bundle outState) {
 		super.onSaveInstanceState(outState);
 		this.bundle = outState;
-		saveToBundle(outState);
+		save(bundle);
 	}
 	
 	public void showMenuPopup(View view) {

@@ -2,7 +2,10 @@ package myreality.development.magicwizard.activities;
 
 import java.util.HashSet;
 
+import myreality.development.magicwizard.util.BundleIO;
+import myreality.development.magicwizard.util.Clearable;
 import myreality.development.magicwizard.util.Reloadable;
+import myreality.development.magicwizard.util.Resetable;
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
@@ -16,10 +19,12 @@ import android.view.WindowManager;
  * @version 1.1
  * @since 1.0
  */
-public class MagicActivity extends Activity {
+public class MagicActivity extends Activity implements Resetable, Clearable, BundleIO {
 		
-	protected HashSet<Reloadable> reloadables;
+	private HashSet<Reloadable> reloadables;
 	private SharedPreferences settings;
+	
+	
 	
 	public MagicActivity() {
 		reloadables = new HashSet<Reloadable>();
@@ -103,6 +108,42 @@ public class MagicActivity extends Activity {
 	
 	public void addReloadable(Reloadable reloadable) {
 		reloadables.add(reloadable);
+	}
+
+	@Override
+	public void reset() {
+		for (Reloadable reloadable : reloadables) {
+			reloadable.onReload(this, true);
+		}
+	}
+
+	@Override
+	public void clear() {
+		reloadables.clear();
+	}
+
+	@Override
+	public void save(Bundle bundle) {
+		
+		if (bundle != null) {
+		
+			for (Reloadable reloadable : reloadables) {
+				reloadable.saveToBundle(bundle);
+			}
+		
+		}
+	}
+
+	@Override
+	public void load(Bundle bundle) {
+		
+		if (bundle != null) {
+		
+			for (Reloadable reloadable : reloadables) {
+				reloadable.loadFromBundle(bundle);
+			}
+			
+		}
 	}
 	
 	
