@@ -26,6 +26,7 @@ public class MagicActivity extends Activity implements Resetable, Clearable, Bun
 	
 	
 	
+	
 	public MagicActivity() {
 		reloadables = new HashSet<Reloadable>();
 	}
