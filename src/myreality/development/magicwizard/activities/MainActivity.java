@@ -46,8 +46,8 @@ public class MainActivity extends MagicActivity {
 		menu.setShadowWidthRes(R.dimen.shadow_width);
 		menu.setShadowDrawable(R.drawable.shadow);		
 		menu.setBehindWidthRes(R.dimen.menu_width);
-		menu.setFadeDegree(0.35f);
-		menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT); 
+		menu.setFadeDegree(1.0f);
+		menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
 		menu.setMenu(R.layout.menu);
 	}
 	
