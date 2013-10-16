@@ -1,16 +1,9 @@
 package myreality.development.magicwizard.activities;
 
 import myreality.development.magicwizard.R;
-import myreality.development.magicwizard.components.CloseComponent;
 import myreality.development.magicwizard.components.ComponentHandler;
-import myreality.development.magicwizard.components.InfoComponent;
-import myreality.development.magicwizard.components.PreferencesComponent;
-import myreality.development.magicwizard.components.RateComponent;
-import myreality.development.magicwizard.components.ResetComponent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ListView;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 
@@ -25,9 +18,6 @@ public class MainActivity extends MagicActivity {
 
 	// Target bundle to save data with
 	private Bundle bundle;
-
-	// Typeface TTF font (Fritz bold)
-	private Typeface typeface;
 
 	private ComponentHandler handler;
 
@@ -46,7 +36,7 @@ public class MainActivity extends MagicActivity {
 
 		// Load the target font from assets
 		handler = new ComponentHandler();
-		typeface = Typeface.createFromAsset(getAssets(), "fonts/fritzbold.ttf");
+		//Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/fritzbold.ttf");
 		this.bundle = bundle;
 
 		// Inject behavior
@@ -62,17 +52,13 @@ public class MainActivity extends MagicActivity {
 		menu.setMode(SlidingMenu.LEFT);
 		menu.setTouchModeAbove(SlidingMenu.LEFT);
 		menu.setShadowWidthRes(R.dimen.shadow_width);
-		menu.setShadowDrawable(R.drawable.shadow);
-		menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
+		menu.setShadowDrawable(R.drawable.shadow);		
+		menu.setBehindWidthRes(R.dimen.menu_width);
 		menu.setFadeDegree(0.35f);
 		menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
 		
 		// TEST Layout! 
 		menu.setMenu(R.layout.menu);
-		
-		ListView menuList = (ListView) menu.findViewById(R.id.listview);
-		
-
 	}
 
 	/**
