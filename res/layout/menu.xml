@@ -1,13 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="fill_parent"
-    android:background="@drawable/darkbutton"
-    android:orientation="vertical" >
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
 
-    <ListView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/listview"
-    android:layout_width="100dp"
-    android:layout_height="wrap_content" /> 
-
-</LinearLayout>
+        <ImageButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/btn_preferences"
+            android:contentDescription="@string/app_description" 
+            android:src="@drawable/ico_preferences"
+            android:onClick="onButtonClick"
+            android:background="@drawable/darkbutton"
+        />
+        <ImageButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/btn_reset"
+            android:contentDescription="@string/app_description" 
+            android:src="@drawable/ico_reset"
+            android:onClick="onButtonClick"
+            android:background="@drawable/darkbutton"
+        />
+        <ImageButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/btn_info"
+            android:contentDescription="@string/app_description" 
+            android:src="@drawable/ico_info"
+            android:onClick="onButtonClick"
+            android:background="@drawable/darkbutton"
+        />
+        <ImageButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/btn_rate"
+            android:contentDescription="@string/app_description" 
+            android:src="@drawable/ico_rate"
+            android:onClick="onButtonClick"
+            android:background="@drawable/darkbutton"
+        />
+        <ImageButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/btn_close"
+            android:contentDescription="@string/app_description" 
+            android:src="@drawable/ico_quit"
+            android:onClick="onButtonClick"
+            android:background="@drawable/darkbutton"
+        />
+    </LinearLayout>

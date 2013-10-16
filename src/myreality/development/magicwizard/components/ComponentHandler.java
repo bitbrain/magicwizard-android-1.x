@@ -1,7 +1,9 @@
 package myreality.development.magicwizard.components;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import android.app.Activity;
-import android.util.SparseArray;
 
 /**
  * Handles components by calling them by ID
@@ -12,10 +14,10 @@ import android.util.SparseArray;
  */
 public final class ComponentHandler {
 	
-	private SparseArray<Component> components;
+	private Map<Long, Component> components;
 	
 	public ComponentHandler() {
-		this.components = new SparseArray<Component>();
+		this.components = new HashMap<Long, Component>();
 	}
 
 	/**
@@ -24,8 +26,13 @@ public final class ComponentHandler {
 	 * @param id
 	 * @param component
 	 */
-	public void add(Integer id, Component component) {
+	public void add(Long id, Component component) {
 		components.put(id, component);
+	}
+	
+	public void add(int id, Component component) {
+		long longId = id;
+		add(longId, component);
 	}
 	
 	/**
@@ -33,7 +40,7 @@ public final class ComponentHandler {
 	 * 
 	 * @param id
 	 */
-	public void remove(Integer id) {
+	public void remove(Long id) {
 		components.remove(id);
 	}
 	
@@ -43,7 +50,7 @@ public final class ComponentHandler {
 	 * @param id
 	 * @param context
 	 */
-	public void handle(Integer id, Activity context) {
+	public void handle(Long id, Activity context) {
 		Component component = components.get(id);
 		
 		if (component != null) {

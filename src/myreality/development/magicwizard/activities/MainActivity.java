@@ -2,8 +2,10 @@ package myreality.development.magicwizard.activities;
 
 import myreality.development.magicwizard.R;
 import myreality.development.magicwizard.components.ComponentHandler;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 
@@ -19,8 +21,6 @@ public class MainActivity extends MagicActivity {
 	// Target bundle to save data with
 	private Bundle bundle;
 
-	private ComponentHandler handler;
-
 	private SlidingMenu menu;
 
 	/*
@@ -35,16 +35,11 @@ public class MainActivity extends MagicActivity {
 		setContentView(R.layout.main);
 
 		// Load the target font from assets
-		handler = new ComponentHandler();
-		//Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/fritzbold.ttf");
+		Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/fritzbold.ttf");
 		this.bundle = bundle;
 
-		// Inject behavior
-		//handler.add(R.id.btn_reset, new ResetComponent());
-		//handler.add(R.id.btn_rate, new RateComponent());
-		//handler.add(R.id.btn_close, new CloseComponent());
-		//handler.add(R.id.btn_info, new InfoComponent(typeface));
-		//handler.add(R.id.btn_preferences, new PreferencesComponent());
+		ComponentHandler handler = new ComponentHandler();
+		
 
 		reloadPreferences();
 		
@@ -60,15 +55,9 @@ public class MainActivity extends MagicActivity {
 		// TEST Layout! 
 		menu.setMenu(R.layout.menu);
 	}
-
-	/**
-	 * Is called when a button of the main menu has been pressed
-	 * 
-	 * @param view
-	 *            Target button
-	 */
+	
 	public void onButtonClick(View view) {
-		handler.handle(view.getId(), this);
+		Toast.makeText(this, "It works!", Toast.LENGTH_LONG).show();
 	}
 
 	private void reloadPreferences() {
