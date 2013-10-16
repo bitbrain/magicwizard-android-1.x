@@ -146,6 +146,4 @@ public class MagicActivity extends Activity implements Resetable, Clearable, Bun
 			
 		}
 	}
-	
-	
 }
