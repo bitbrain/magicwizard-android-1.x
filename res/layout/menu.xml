@@ -5,15 +5,20 @@
         android:layout_height="fill_parent"
         android:orientation="vertical" >
 
+    	<!-- CLOSE -->
+    	
         <ImageButton
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:id="@+id/btn_preferences"
+            android:id="@+id/btn_close"
             android:contentDescription="@string/app_description" 
-            android:src="@drawable/ico_preferences"
+            android:src="@drawable/ico_quit"
             android:onClick="onButtonClick"
             android:background="@drawable/darkbutton"
         />
+        
+        <!-- RESET -->
+        
         <ImageButton
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
@@ -23,6 +28,9 @@
             android:onClick="onButtonClick"
             android:background="@drawable/darkbutton"
         />
+        
+        <!-- INFO -->
+        
         <ImageButton
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
@@ -32,21 +40,15 @@
             android:onClick="onButtonClick"
             android:background="@drawable/darkbutton"
         />
+        
+        <!-- RATE -->
+        
         <ImageButton
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:id="@+id/btn_rate"
             android:contentDescription="@string/app_description" 
             android:src="@drawable/ico_rate"
-            android:onClick="onButtonClick"
-            android:background="@drawable/darkbutton"
-        />
-        <ImageButton
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:id="@+id/btn_close"
-            android:contentDescription="@string/app_description" 
-            android:src="@drawable/ico_quit"
             android:onClick="onButtonClick"
             android:background="@drawable/darkbutton"
         />

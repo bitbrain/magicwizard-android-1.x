@@ -35,10 +35,10 @@ public class MainActivity extends MagicActivity {
 		super.onCreate(bundle);
 		
 		setContentView(R.layout.main);
-		this.bundle = bundle;
 
 		ComponentHandlerFactory handlerFactory = new SimpleComponentHandlerFactory(this);
 		handler = handlerFactory.create();
+		this.bundle = bundle;
 		
 		menu = new SlidingMenu(this);
 		menu.setMode(SlidingMenu.LEFT);
@@ -47,9 +47,7 @@ public class MainActivity extends MagicActivity {
 		menu.setShadowDrawable(R.drawable.shadow);		
 		menu.setBehindWidthRes(R.dimen.menu_width);
 		menu.setFadeDegree(0.35f);
-		menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
-		
-		// TEST Layout! 
+		menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT); 
 		menu.setMenu(R.layout.menu);
 	}
 	
