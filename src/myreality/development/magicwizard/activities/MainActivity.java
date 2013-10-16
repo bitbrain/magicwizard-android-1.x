@@ -2,10 +2,10 @@ package myreality.development.magicwizard.activities;
 
 import myreality.development.magicwizard.R;
 import myreality.development.magicwizard.components.ComponentHandler;
-import android.graphics.Typeface;
+import myreality.development.magicwizard.components.ComponentHandlerFactory;
+import myreality.development.magicwizard.components.SimpleComponentHandlerFactory;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 
@@ -22,6 +22,8 @@ public class MainActivity extends MagicActivity {
 	private Bundle bundle;
 
 	private SlidingMenu menu;
+	
+	private ComponentHandler handler;
 
 	/*
 	 * (non-Javadoc)
@@ -33,15 +35,10 @@ public class MainActivity extends MagicActivity {
 		super.onCreate(bundle);
 		
 		setContentView(R.layout.main);
-
-		// Load the target font from assets
-		Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/fritzbold.ttf");
 		this.bundle = bundle;
 
-		ComponentHandler handler = new ComponentHandler();
-		
-
-		reloadPreferences();
+		ComponentHandlerFactory handlerFactory = new SimpleComponentHandlerFactory(this);
+		handler = handlerFactory.create();
 		
 		menu = new SlidingMenu(this);
 		menu.setMode(SlidingMenu.LEFT);
@@ -57,18 +54,9 @@ public class MainActivity extends MagicActivity {
 	}
 	
 	public void onButtonClick(View view) {
-		Toast.makeText(this, "It works!", Toast.LENGTH_LONG).show();
+		handler.handle(view.getId(), this);
 	}
-
-	private void reloadPreferences() {
-		//clear();
-		if (isSinglePlayerMode()) {
-			//setContentView(R.layout.main);
-		} else {
-			//setContentView(R.layout.main_two_players);
-		}
-	}
-
+	
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -77,7 +65,6 @@ public class MainActivity extends MagicActivity {
 	@Override
 	protected void onResume() {
 		super.onResume();
-		reloadPreferences();
 		reset();
 		load(bundle);
 	}
@@ -97,7 +84,6 @@ public class MainActivity extends MagicActivity {
 	protected void onRestoreInstanceState(Bundle bundle) {
 		super.onRestoreInstanceState(bundle);
 		this.bundle = bundle;
-		reloadPreferences();
 		load(bundle);
 	}
 
