@@ -19,6 +19,7 @@ public class PoisonBar extends CounterBar {
 	}
 	
 	public void init() {
+		valueBar.setFontSize(98);
 		valueBar.addRule(0, getResources().getColor(R.color.poison_low));
 		valueBar.addRule(10, getResources().getColor(R.color.poison));
 		valueBar.setMaximum(10);
