@@ -15,9 +15,18 @@ This app is still under development and we want to improve this software each da
 
 To work on this project, you will need:
 
+* Fork this project via ```git clone repository-url```
 * Basic experience in [Java and Android development](http://www.youtube.com/playlist?list=PL301ACBB31D739F72)
 * [Eclipse IDE](http://www.eclipse.org/downloads/) (Indigo preferred)
 * [Android SDK](http://developer.android.com/sdk/index.html) including ADT
+* [SlidingMenu](https://github.com/jfeinstein10/SlidingMenu) library on GitHub
+
+To configure the sliding menu, download the code (or fork it via git). Afterwards you open Eclipse and follow the steps:
+
+1. Go to ```File -> New -> Others..```
+2. Afterwards select ```Android -> Android Project from Existing Code```
+3. Select the ```library``` folder of the downloaded sliding menu project
+4. Click ```finish```
 
 Everything complete? Then you should know, that you can fork this repository on order to make improvements! Just go on and make a pull request. Maybe it has a chance to get approved!
 
