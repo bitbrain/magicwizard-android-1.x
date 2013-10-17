@@ -63,15 +63,9 @@ public class MyComponent implements Component {
 }
 ```
 
-Afterwards you have to register your component in the ```MainActivity``` class and map it to a specific input:
+Afterwards you have to register your component in the ```SimpleComponentHandlerFactory``` class and map it to a specific input:
 
 ```java
 handler.addComponent(R.id.btn_my_action, new MyComponent());
 ```
-Now it is possible to call the handler in an action method:
-```java
-public void onAction(View view) {
-	handler.handle(view.getID(), this);
-}
-```
-The handler will process the registered functionality. If the view isn't registered yet, nothing will happen!
+The handler will be processed by the current activity context. 
