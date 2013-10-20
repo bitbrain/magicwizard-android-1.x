@@ -30,6 +30,16 @@ To configure the sliding menu, download the code (or fork it via git). Afterward
 
 Everything complete? Then you should know, that you can fork this repository on order to make improvements! Just go on and make a pull request. Maybe it has a chance to get approved!
 
+#### Linux hint
+
+If you are using a 64 bit based architecture, install the ia libraries first, in order to generate the ```R.java``` files properly:
+
+```text
+sudo apt-get install ia32-libs
+```
+
+It is also important to place the ```SlidingMenu``` project folder in the same folder with the ```magicwizard-android``` project folder.
+
 ### Project Structure
 
 The project structure looks as follows:
