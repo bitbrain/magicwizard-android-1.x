@@ -5,6 +5,7 @@ import android.content.Context;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -31,7 +32,8 @@ public class AppCaption extends LinearLayout {
 	
 	private void initLayout(Context context) {
 		inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		addView(inflater.inflate(R.layout.app_caption, null));
+		View view = inflater.inflate(R.layout.app_caption, null);
+		addView(view);		
 		TextView txVersion = (TextView) findViewById(R.id.tx_version);
 		Typeface type = Typeface.createFromAsset(context.getAssets(),"fonts/fritzbold.ttf"); 
 		txVersion.setTypeface(type);

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/myreality.development.magicwizard"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_horizontal"
+    android:orientation="horizontal"
+    android:baselineAligned="false" >
+    
+    <LinearLayout    
+	    android:layout_width="wrap_content"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:padding="17dip"
+	    android:weightSum="4"
+	    android:background="@color/background" >
+	
+	    <myreality.development.magicwizard.widgets.DiceView
+	        android:layout_width="wrap_content"
+	        android:layout_height="0dip"
+	        android:layout_weight="1"
+	        custom:eyeCount="6" />
+	
+	    <myreality.development.magicwizard.widgets.DiceView
+	        android:layout_width="wrap_content"
+	        android:layout_height="0dip"
+	        android:layout_weight="1"
+	        custom:eyeCount="10" />
+	
+	    <myreality.development.magicwizard.widgets.DiceView
+	        android:layout_width="wrap_content"
+	        android:layout_height="0dip"
+	        android:layout_weight="1"
+	        custom:eyeCount="20" />
+	
+	    <myreality.development.magicwizard.widgets.DiceView
+	        android:layout_width="wrap_content"
+	        android:layout_height="0dip"
+	        android:layout_weight="1"
+	        custom:eyeCount="30" />
+	
+	</LinearLayout>
+    
+    
+	<LinearLayout
+    android:layout_width="0dip"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:layout_weight="1"
+	    >	    	
+	    <myreality.development.magicwizard.widgets.PoisonBar
+	        android:id="@+id/bar_poison2"
+	        android:layout_width="fill_parent"
+	        android:layout_height="0dip"
+	        android:layout_margin="8dip"
+	        android:layout_weight="2.5"
+	        custom:flipped="true" />
+	    
+	    <myreality.development.magicwizard.widgets.LifeBar
+	        android:id="@+id/bar_life2"
+	        android:layout_width="fill_parent"
+	        android:layout_height="0dip"
+	        android:layout_marginLeft="8dip"
+	        android:layout_marginRight="8dip"
+	        android:layout_marginTop="8dip"
+	        android:layout_weight="3"
+	        custom:flipped="true" />
+
+		<myreality.development.magicwizard.widgets.LifeBar
+		    android:id="@+id/bar_life1"
+	        android:layout_width="fill_parent"
+	        android:layout_height="0dip"
+	        android:layout_marginLeft="8dip"
+	        android:layout_marginRight="8dip"
+	        android:layout_marginTop="8dip"
+	        android:layout_weight="3" />
+	
+	    <myreality.development.magicwizard.widgets.PoisonBar
+	        android:id="@+id/bar_poison1"
+	        android:layout_width="fill_parent"
+	        android:layout_height="0dip"
+	        android:layout_margin="8dip"
+	        android:layout_weight="2.5" />
+
+	</LinearLayout>
+	
+</LinearLayout>
