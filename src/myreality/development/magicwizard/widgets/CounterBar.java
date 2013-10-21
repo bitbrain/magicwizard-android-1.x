@@ -6,6 +6,7 @@ import myreality.development.magicwizard.layouts.FlipLayout;
 import myreality.development.magicwizard.util.Reloadable;
 import android.app.Activity;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.util.AttributeSet;
@@ -24,7 +25,7 @@ public class CounterBar extends FlipLayout implements Reloadable {
 	public CounterBar(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		initLayout(context);
-		loadFromAttributes(attrs);
+		loadFromAttributes(context, attrs);
 	}
 
 	public CounterBar(Context context) {
@@ -102,8 +103,32 @@ public class CounterBar extends FlipLayout implements Reloadable {
 		setValue(bundle.getInt(String.valueOf(getId())));
 	}
 	
-	private void loadFromAttributes(AttributeSet attrs) {
+	private void loadFromAttributes(Context context, AttributeSet attrs) {
 		
+		TypedArray a = context.obtainStyledAttributes(attrs,
+			    R.styleable.CounterBar);
 		
+		final int N = a.getIndexCount();
+		for (int i = 0; i < N; ++i)
+		{
+		    int attr = a.getIndex(i);
+		    switch (attr) {
+		        case R.styleable.CounterBar_buttonSize:
+		        	// TODO: Set button size
+		        	break;
+		        case R.styleable.CounterBar_fontSize:
+		        	// TODO: Set font size
+		        	break;
+		        case R.styleable.CounterBar_minusIcon:
+		        	// TODO: set minus icon
+		        	break;
+		        case R.styleable.CounterBar_plusIcon:
+		        	// TODO: set plus icon
+		        	break;
+		        	
+		    }
+		}
+		
+		a.recycle();
 	}
 }
