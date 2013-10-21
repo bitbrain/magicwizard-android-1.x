@@ -10,6 +10,7 @@ import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageButton;
@@ -110,8 +111,9 @@ public class CounterBar extends FlipLayout implements Reloadable {
 		
 		ImageButton btnLeft = (ImageButton) this.findViewById(R.id.btn_count_left);
 		ImageButton btnRight = (ImageButton) this.findViewById(R.id.btn_count_right);	
-		
+
 		final int N = a.getIndexCount();
+
 		for (int i = 0; i < N; ++i)
 		{
 		    int attr = a.getIndex(i);

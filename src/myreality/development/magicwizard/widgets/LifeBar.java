@@ -21,6 +21,7 @@ public class LifeBar extends CounterBar {
 	}
 	
 	public void init(Activity activity, Context context, AttributeSet attrs) {
+		
 		valueBar.setFontSize(108);
 		
 		if (activity != null) {

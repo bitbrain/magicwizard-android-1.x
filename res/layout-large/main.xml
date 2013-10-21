@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/myreality.development.magicwizard"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/background_vertical"
@@ -16,6 +17,7 @@
         android:layout_marginLeft="8dip"
         android:layout_marginRight="8dip"
         android:layout_marginTop="8dip"
+        custom:fontSize="160"
         android:layout_weight="3" />
 
     <myreality.development.magicwizard.widgets.PoisonBar
