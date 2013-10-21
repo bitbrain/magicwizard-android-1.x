@@ -103,21 +103,29 @@ public class CounterBar extends FlipLayout implements Reloadable {
 		setValue(bundle.getInt(String.valueOf(getId())));
 	}
 	
-	private void loadFromAttributes(Context context, AttributeSet attrs) {
+	protected void loadFromAttributes(Context context, AttributeSet attrs) {
 		
 		TypedArray a = context.obtainStyledAttributes(attrs,
 			    R.styleable.CounterBar);
+		
+		ImageButton btnLeft = (ImageButton) this.findViewById(R.id.btn_count_left);
+		ImageButton btnRight = (ImageButton) this.findViewById(R.id.btn_count_right);	
 		
 		final int N = a.getIndexCount();
 		for (int i = 0; i < N; ++i)
 		{
 		    int attr = a.getIndex(i);
+		    
 		    switch (attr) {
 		        case R.styleable.CounterBar_buttonSize:
-		        	// TODO: Set button size
+		        	// Set a new button size
+		        	float buttonSize = a.getDimension(attr, 28.0f);		        		        	
+		        	btnLeft.setMinimumWidth((int) buttonSize);
+		        	btnRight.setMinimumWidth((int) buttonSize);
 		        	break;
 		        case R.styleable.CounterBar_fontSize:
-		        	// TODO: Set font size
+		        	int fontSize = a.getInteger(attr, 28);	
+		        	valueBar.setFontSize(fontSize);
 		        	break;
 		        case R.styleable.CounterBar_minusIcon:
 		        	// TODO: set minus icon

@@ -11,7 +11,7 @@ public class LifeBar extends CounterBar {
 
 	public LifeBar(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		init();
+		init(null, context, attrs);
 		
 	}
 
@@ -20,7 +20,7 @@ public class LifeBar extends CounterBar {
 		init();
 	}
 	
-	public void init(Activity activity) {
+	public void init(Activity activity, Context context, AttributeSet attrs) {
 		valueBar.setFontSize(108);
 		
 		if (activity != null) {
@@ -36,11 +36,16 @@ public class LifeBar extends CounterBar {
 		valueBar.addRule(valueBar.getMaximum(), getResources().getColor(R.color.life_full));
 		valueBar.addRule(valueBar.getMaximum() / 2, getResources().getColor(R.color.life_medium));
 		valueBar.addRule(valueBar.getMaximum() / 4, getResources().getColor(R.color.life_low));
+		
+		if (attrs != null && context != null) {
+			this.loadFromAttributes(context, attrs);
+		}
+		
 		invalidate();
 	}
 	
 	private void init() {
-		init(null);
+		init(null, null, null);
 	}
 	
 	
@@ -66,7 +71,7 @@ public class LifeBar extends CounterBar {
 	public void reset(Activity activity) {
 		super.reset(activity);
 		if (activity != null) {
-			init(activity);
+			init(activity, null, null);
 		}		
 	}
 
