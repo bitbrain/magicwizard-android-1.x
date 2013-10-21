@@ -24,6 +24,7 @@ public class CounterBar extends FlipLayout implements Reloadable {
 	public CounterBar(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		initLayout(context);
+		loadFromAttributes(attrs);
 	}
 
 	public CounterBar(Context context) {
@@ -99,5 +100,10 @@ public class CounterBar extends FlipLayout implements Reloadable {
 	@Override
 	public void loadFromBundle(Bundle bundle) {
 		setValue(bundle.getInt(String.valueOf(getId())));
+	}
+	
+	private void loadFromAttributes(AttributeSet attrs) {
+		
+		
 	}
 }
