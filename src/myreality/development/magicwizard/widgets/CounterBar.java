@@ -133,10 +133,12 @@ public class CounterBar extends FlipLayout implements Reloadable {
 		        	valueBar.setFontSize(fontSize);
 		        	break;
 		        case R.styleable.CounterBar_minusIcon:
-		        	// TODO: set minus icon
+		        	int minusId = a.getResourceId(attr, R.drawable.ico_minus);
+		        	btnLeft.setImageResource(minusId);
 		        	break;
 		        case R.styleable.CounterBar_plusIcon:
-		        	// TODO: set plus icon
+		        	int plusId = a.getResourceId(attr, R.drawable.ico_plus);
+		        	btnRight.setImageResource(plusId);
 		        	break;
 		        	
 		    }

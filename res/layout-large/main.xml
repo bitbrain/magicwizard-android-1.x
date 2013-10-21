@@ -17,8 +17,6 @@
         android:layout_marginLeft="8dip"
         android:layout_marginRight="8dip"
         android:layout_marginTop="8dip"
-        custom:fontSize="360"
-        custom:buttonSize="150dp"
         android:layout_weight="3" />
 
     <myreality.development.magicwizard.widgets.PoisonBar
@@ -28,7 +26,6 @@
         android:layout_marginLeft="8dip"
         android:layout_marginRight="8dip"
         android:layout_marginTop="8dip"
-        custom:fontSize="300"
         android:layout_weight="2.5" />
 
     <myreality.development.magicwizard.widgets.DiceCollection
