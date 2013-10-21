@@ -265,6 +265,10 @@ public class ValueBar extends View {
 		this.fontSize = fontSize;
 	}
 	
+	public int getFontSize() {
+		return fontSize;
+	}
+	
 	@Override
 	protected void onDraw(Canvas canvas) {
 		super.onDraw(canvas);

@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.AttributeSet;
+import android.util.Log;
 
 public class LifeBar extends CounterBar {
 
@@ -22,11 +23,10 @@ public class LifeBar extends CounterBar {
 	
 	public void init(Activity activity, Context context, AttributeSet attrs) {
 		
-		valueBar.setFontSize(108);
-		
 		if (activity != null) {
 			loadFromPreferences(activity, true);
 		} else {
+			valueBar.setFontSize(108);
 			setRuleDefault(20);
 			setValue(20);
 		}
