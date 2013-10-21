@@ -10,20 +10,25 @@ public class PoisonBar extends CounterBar {
 
 	public PoisonBar(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		init();
+		init(context, attrs);
 	}
 
 	public PoisonBar(Context context) {
 		super(context);
-		init();
+		init(context, null);
 	}
 	
-	public void init() {
+	public void init(Context context, AttributeSet attrs) {
 		valueBar.setFontSize(98);
 		valueBar.addRule(0, getResources().getColor(R.color.poison_low));
 		valueBar.addRule(10, getResources().getColor(R.color.poison));
 		valueBar.setMaximum(10);
 		valueBar.enableLowCap(0);
+		
+		if (attrs != null) {
+			this.loadFromAttributes(context, attrs);
+		}
+		
 		reset(null);
 	}
 	
