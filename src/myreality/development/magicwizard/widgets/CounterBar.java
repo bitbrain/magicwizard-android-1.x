@@ -12,6 +12,7 @@ import android.os.Vibrator;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageButton;
 
 public class CounterBar extends FlipLayout implements Reloadable {
@@ -121,8 +122,11 @@ public class CounterBar extends FlipLayout implements Reloadable {
 		        case R.styleable.CounterBar_buttonSize:
 		        	// Set a new button size
 		        	float buttonSize = a.getDimension(attr, 28.0f);		        		        	
-		        	btnLeft.setMinimumWidth((int) buttonSize);
-		        	btnRight.setMinimumWidth((int) buttonSize);
+		        	ViewGroup.LayoutParams leftParams = btnLeft.getLayoutParams();
+		        	ViewGroup.LayoutParams rightParams = btnRight.getLayoutParams();
+		        	
+		        	leftParams.width = (int) buttonSize;
+		        	rightParams.width = (int) buttonSize;
 		        	break;
 		        case R.styleable.CounterBar_fontSize:
 		        	int fontSize = a.getInteger(attr, 28);	
