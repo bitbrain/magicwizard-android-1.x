@@ -59,7 +59,11 @@ AndroidManifest.xml                       <- Contains general Android configurat
 README.md                                 <- Documentation of the software
 ```
 
-### Getting started
+## Getting started
+
+Before you write a single line of code, ensure that you're in the right branch. Never touch the ```master``` branch. Instead, use always the active milestone branch as a reference.
+
+### Components
 
 The basic concept of this app is to create components and map them to a specific view. Each view has an own id. Without going into much detail, you can write an own component:
 
@@ -79,3 +83,19 @@ Afterwards you have to register your component in the ```SimpleComponentHandlerF
 handler.addComponent(R.id.btn_my_action, new MyComponent());
 ```
 The handler will be processed by the current activity context. 
+
+### Toasts
+
+Android provides so called ```Toast``` objects in order to show small popup messages. This app has an own wrapper implementation to provide custom toasts for the following types of type ```ToastType```:
+
+* **SUCCESS**: Should be used when something good happened
+* **INFO**: Should be used to inform the user
+* **FAIL**: Should be used when something bad happened
+
+It is very easy to make a simple toast message. You only need the ```Context``` (e.g. your current ```Activity```):
+
+```java
+MagicToast.show(context, "This is your text", ToastType.SUCCESS);
+```
+
+That's it!
