@@ -14,25 +14,30 @@
         android:id="@+id/bar_life1"
         android:layout_width="fill_parent"
         android:layout_height="0dip"
-        android:layout_marginLeft="8dip"
-        android:layout_marginRight="8dip"
-        android:layout_marginTop="8dip"
-        android:layout_weight="3" />
+        android:layout_marginLeft="@dimen/large_margin"
+        android:layout_marginRight="@dimen/large_margin"
+        android:layout_marginTop="@dimen/large_margin"
+        android:layout_weight="3" 
+        custom:buttonSize="@dimen/button_size_large"
+        custom:fontSize="@integer/font_size_large"
+        />
 
     <myreality.development.magicwizard.widgets.PoisonBar
         android:id="@+id/bar_poison1"
         android:layout_width="fill_parent"
         android:layout_height="0dip"
-        android:layout_marginLeft="8dip"
-        android:layout_marginRight="8dip"
-        android:layout_marginTop="8dip"
+        android:layout_marginLeft="@dimen/large_margin"
+        android:layout_marginRight="@dimen/large_margin"
+        android:layout_marginTop="@dimen/large_margin"
+        custom:buttonSize="@dimen/button_size_large"
+        custom:fontSize="@integer/font_size_large"
         android:layout_weight="2.5" />
 
     <myreality.development.magicwizard.widgets.DiceCollection
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="8dip"
+        android:layout_margin="@dimen/large_margin"
         android:background="@color/background"
         android:gravity="center" />
 

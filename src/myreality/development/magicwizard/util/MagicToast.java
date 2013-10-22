@@ -4,6 +4,7 @@ import myreality.development.magicwizard.R;
 import android.content.Context;
 import android.graphics.Paint;
 import android.graphics.Paint.Style;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
 import android.graphics.drawable.ShapeDrawable;
@@ -35,7 +36,7 @@ public class MagicToast {
 			
 			@Override
 			public int getIconResource() {
-				return R.drawable.dice;
+				return R.drawable.ico_success;
 			}
 
 			@Override
@@ -141,6 +142,8 @@ public class MagicToast {
 		
 	}
 	
+	private static Typeface typeface;
+	
 	// Private constructor, this is only an utility class
 	private MagicToast() { }
 	
@@ -152,6 +155,11 @@ public class MagicToast {
 	 * @param type type of this toast
 	 */
 	public static void show(Context context, String text, ToastType type) {
+		
+		if (typeface == null) {
+			typeface = Typeface.createFromAsset(context.getAssets(), "fonts/fritzbold.ttf");
+		}
+		
 		Toast toast = new Toast(context);	
 		toast.setView(generateToastView(context, text, type));		
 		toast.show();
@@ -165,7 +173,7 @@ public class MagicToast {
 		ViewGroup layout = generateLayout(context, type); 
 		ImageView imageView = generateImageView(context, type);
 		TextView textView = generateTextView(context, type);
-		textView.setTextSize(25);
+		textView.setTextSize(36);
 		textView.setText(text);			
 		textView.setGravity(Gravity.CENTER);
 		textView.setPadding(30, 0, 0, 0);
@@ -186,6 +194,7 @@ public class MagicToast {
 	private static TextView generateTextView(Context context, ToastType type) {
 		TextView view = new TextView(context);
 		view.setTextColor(context.getResources().getColor(type.getFontColorResource()));
+		view.setTypeface(typeface);
 		return view;
 		
 	}
