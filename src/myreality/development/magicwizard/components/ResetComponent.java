@@ -20,10 +20,8 @@ public class ResetComponent implements Component {
 		if (context instanceof Resetable) {
 			Resetable resetable = (Resetable)context;
 			resetable.reset();
-			
 
-			//MagicToast.show(context, "Successfully resetted", ToastType.SUCCESS);
-			MagicToast.show(context, "New version available", ToastType.INFO);
+			MagicToast.show(context, "Successfully resetted", ToastType.SUCCESS);
 		}
 	}
 
