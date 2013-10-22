@@ -1,6 +1,11 @@
 package myreality.development.magicwizard.util;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.view.Gravity;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -47,20 +52,25 @@ public class MagicToast {
 	 * @param type type of this toast
 	 */
 	public static void show(Context context, String text, ToastType type) {
-		Toast toast = Toast.makeText(context, text, Toast.LENGTH_LONG);
-		
-		switch (type) {
-		case FAIL:
-			break;
-		case INFO:
-			break;
-		case SUCCESS:
-			break;
-		case WARN:
-			break;
-		
-		}
-		
+		Toast toast = new Toast(context);	
+		toast.setView(generateToastView(context, text, type));		
 		toast.show();
+	}
+	
+	
+	
+	private static View generateToastView(Context context, String text, ToastType type) {
+		
+		LinearLayout layout = new LinearLayout(context);
+		layout.setBackgroundResource(android.R.color.white);
+		
+		TextView textView = new TextView(context);
+		textView.setTextColor(Color.RED);
+		textView.setTextSize(25);
+		textView.setGravity(Gravity.CENTER);
+		textView.setText(text);		
+		layout.addView(textView);
+		
+		return layout;
 	}
 }
