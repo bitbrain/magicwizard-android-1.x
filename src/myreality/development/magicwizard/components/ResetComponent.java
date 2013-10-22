@@ -1,5 +1,7 @@
 package myreality.development.magicwizard.components;
 
+import myreality.development.magicwizard.util.MagicToast;
+import myreality.development.magicwizard.util.MagicToast.ToastType;
 import myreality.development.magicwizard.util.Resetable;
 import android.app.Activity;
 
@@ -18,6 +20,8 @@ public class ResetComponent implements Component {
 		if (context instanceof Resetable) {
 			Resetable resetable = (Resetable)context;
 			resetable.reset();
+			
+			MagicToast.show(context, "Resetted game", ToastType.SUCCESS);
 		}
 	}
 
