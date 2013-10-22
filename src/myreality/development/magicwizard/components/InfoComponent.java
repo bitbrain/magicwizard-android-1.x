@@ -13,7 +13,6 @@ import android.widget.TextView;
  * @author Miguel Gonzalez <miguel-gonzalez@gmx.de>
  * @since 1.2
  * @version 1.2
- *
  */
 public class InfoComponent implements Component {
 	
