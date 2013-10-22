@@ -1,5 +1,6 @@
 package myreality.development.magicwizard.util;
 
+import myreality.development.magicwizard.R;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,22 +25,20 @@ public class MagicToast {
 		 * Identifier for a success toast
 		 */
 		SUCCESS {
+			
 			@Override
 			public int getIconResource() {
-				// TODO Auto-generated method stub
-				return 0;
+				return R.drawable.dice;
 			}
 
 			@Override
 			public int getBackgroundResource() {
-				// TODO Auto-generated method stub
-				return 0;
+				return R.drawable.darkbutton;
 			}
 
 			@Override
 			public int getColorResource() {
-				// TODO Auto-generated method stub
-				return 0;
+				return R.color.caption;
 			}
 		},
 	
@@ -47,22 +46,20 @@ public class MagicToast {
 		 * Identifier for an informal toast
 		 */
 		INFO {
+
 			@Override
 			public int getIconResource() {
-				// TODO Auto-generated method stub
-				return 0;
+				return R.drawable.dice;
 			}
 
 			@Override
 			public int getBackgroundResource() {
-				// TODO Auto-generated method stub
-				return 0;
+				return R.drawable.darkbutton;
 			}
 
 			@Override
 			public int getColorResource() {
-				// TODO Auto-generated method stub
-				return 0;
+				return R.color.caption;
 			}
 		},
 	
@@ -70,22 +67,20 @@ public class MagicToast {
 		 * Identifier for a warning toast
 		 */
 		WARN {
+
 			@Override
 			public int getIconResource() {
-				// TODO Auto-generated method stub
-				return 0;
+				return R.drawable.dice;
 			}
 
 			@Override
 			public int getBackgroundResource() {
-				// TODO Auto-generated method stub
-				return 0;
+				return R.drawable.darkbutton;
 			}
 
 			@Override
 			public int getColorResource() {
-				// TODO Auto-generated method stub
-				return 0;
+				return R.color.caption;
 			}
 		},
 	
@@ -93,22 +88,20 @@ public class MagicToast {
 		 * Identifier for a failing toast
 		 */
 		FAIL {
+
 			@Override
 			public int getIconResource() {
-				// TODO Auto-generated method stub
-				return 0;
+				return R.drawable.dice;
 			}
 
 			@Override
 			public int getBackgroundResource() {
-				// TODO Auto-generated method stub
-				return 0;
+				return R.drawable.darkbutton;
 			}
 
 			@Override
 			public int getColorResource() {
-				// TODO Auto-generated method stub
-				return 0;
+				return R.color.caption;
 			}
 		};
 		
@@ -145,6 +138,7 @@ public class MagicToast {
 		TextView textView = generateTextView(context, type);
 		textView.setTextSize(25);
 		textView.setText(text);				
+		textView.setPadding(30, 0, 0, 0);
 
 		// Initialize layout
 		layout.addView(imageView);
