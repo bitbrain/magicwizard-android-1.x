@@ -1,9 +1,9 @@
 package myreality.development.magicwizard.util;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,22 +23,100 @@ public class MagicToast {
 		/**
 		 * Identifier for a success toast
 		 */
-		SUCCESS,
+		SUCCESS {
+			@Override
+			public int getIconResource() {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+
+			@Override
+			public int getBackgroundResource() {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+
+			@Override
+			public int getColorResource() {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+		},
 	
 		/**
 		 * Identifier for an informal toast
 		 */
-		INFO,
+		INFO {
+			@Override
+			public int getIconResource() {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+
+			@Override
+			public int getBackgroundResource() {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+
+			@Override
+			public int getColorResource() {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+		},
 	
 		/**
 		 * Identifier for a warning toast
 		 */
-		WARN,
+		WARN {
+			@Override
+			public int getIconResource() {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+
+			@Override
+			public int getBackgroundResource() {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+
+			@Override
+			public int getColorResource() {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+		},
 	
 		/**
 		 * Identifier for a failing toast
 		 */
-		FAIL
+		FAIL {
+			@Override
+			public int getIconResource() {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+
+			@Override
+			public int getBackgroundResource() {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+
+			@Override
+			public int getColorResource() {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+		};
+		
+		public abstract int getIconResource();		
+		public abstract int getBackgroundResource();
+		public abstract int getColorResource();
+		
+		
 	}
 	
 	// Private constructor, this is only an utility class
@@ -61,16 +139,36 @@ public class MagicToast {
 	
 	private static View generateToastView(Context context, String text, ToastType type) {
 		
-		LinearLayout layout = new LinearLayout(context);
-		layout.setBackgroundResource(android.R.color.white);
-		
-		TextView textView = new TextView(context);
-		textView.setTextColor(Color.RED);
+		// Load components
+		ViewGroup layout = generateLayout(context, type); 
+		ImageView imageView = generateImageView(context, type);
+		TextView textView = generateTextView(context, type);
 		textView.setTextSize(25);
-		textView.setGravity(Gravity.CENTER);
-		textView.setText(text);		
+		textView.setText(text);				
+
+		// Initialize layout
+		layout.addView(imageView);
 		layout.addView(textView);
 		
+		return layout;
+	}
+	
+	private static ImageView generateImageView(Context context, ToastType type) {
+		ImageView view = new ImageView(context);
+		view.setImageResource(type.getIconResource());
+		return view;
+	}
+	
+	private static TextView generateTextView(Context context, ToastType type) {
+		TextView view = new TextView(context);
+		view.setTextColor(context.getResources().getColor(type.getColorResource()));
+		return view;
+		
+	}
+	
+	private static ViewGroup generateLayout(Context context, ToastType type) {
+		LinearLayout layout = new LinearLayout(context);
+		layout.setBackgroundResource(type.getBackgroundResource());
 		return layout;
 	}
 }
