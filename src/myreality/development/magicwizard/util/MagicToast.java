@@ -63,7 +63,7 @@ public class MagicToast {
 
 			@Override
 			public int getIconResource() {
-				return R.drawable.dice;
+				return R.drawable.ico_info_small;
 			}
 
 			@Override
@@ -81,32 +81,6 @@ public class MagicToast {
 				return R.color.toast_background_info;
 			}
 
-		},
-	
-		/**
-		 * Identifier for a warning toast
-		 */
-		WARN {
-
-			@Override
-			public int getIconResource() {
-				return R.drawable.dice;
-			}
-
-			@Override
-			public int getFontColorResource() {
-				return R.color.toast_text_warn;
-			}
-
-			@Override
-			public int getBorderColorResource() {
-				return R.color.toast_border_warn;
-			}
-
-			@Override
-			public int getBackgroundColorResource() {
-				return R.color.toast_background_warn;
-			}
 		},
 	
 		/**

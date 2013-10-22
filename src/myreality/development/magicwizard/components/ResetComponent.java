@@ -23,7 +23,7 @@ public class ResetComponent implements Component {
 			
 
 			//MagicToast.show(context, "Successfully resetted", ToastType.SUCCESS);
-			MagicToast.show(context, "An error occured", ToastType.FAIL);
+			MagicToast.show(context, "New version available", ToastType.INFO);
 		}
 	}
 
