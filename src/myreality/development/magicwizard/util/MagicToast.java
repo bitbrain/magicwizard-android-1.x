@@ -2,6 +2,12 @@ package myreality.development.magicwizard.util;
 
 import myreality.development.magicwizard.R;
 import android.content.Context;
+import android.graphics.Paint;
+import android.graphics.Paint.Style;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.LayerDrawable;
+import android.graphics.drawable.ShapeDrawable;
+import android.graphics.drawable.shapes.RectShape;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -184,12 +190,38 @@ public class MagicToast {
 		
 	}
 	
+	@SuppressWarnings("deprecation")
 	private static ViewGroup generateLayout(Context context, ToastType type) {
 		LinearLayout layout = new LinearLayout(context);
 		
 		// Set background
+		layout.setBackgroundDrawable(generateDrawable(context, type));
 		
 		layout.setPadding(30, 30, 30, 30);
 		return layout;
+	}
+	
+	private static Drawable generateDrawable(Context context, ToastType type) {	
+		int colorBackground = context.getResources().getColor(type.getBackgroundColorResource());
+		int colorBorder = context.getResources().getColor(type.getBorderColorResource());
+		
+		ShapeDrawable drawable = new ShapeDrawable(new RectShape());
+		Drawable[] layers = new Drawable[2];
+		Paint paint = drawable.getPaint();	
+		paint.setColor(colorBorder);
+		paint.setStyle(Style.STROKE);
+		paint.setStrokeWidth(10);
+		
+		ShapeDrawable drawable2 = new ShapeDrawable(new RectShape());
+		paint = drawable2.getPaint();
+		paint.setColor(colorBackground);
+		paint.setStyle(Style.FILL);
+		
+		layers[0] = drawable2;
+		layers[1] = drawable;
+		
+		LayerDrawable composite = new LayerDrawable(layers);
+		
+		return composite;
 	}
 }

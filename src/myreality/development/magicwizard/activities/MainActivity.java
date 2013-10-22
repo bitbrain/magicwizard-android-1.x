@@ -53,6 +53,7 @@ public class MainActivity extends MagicActivity {
 	
 	public void onButtonClick(View view) {
 		handler.handle(view.getId(), this);
+		menu.showContent(true);
 	}
 	
 	/*
