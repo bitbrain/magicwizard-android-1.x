@@ -20,7 +20,13 @@
     <dimen name="menu_width">85dp</dimen>
     <dimen name="list_padding">0dp</dimen>
     <dimen name="shadow_width">0dp</dimen>
-
-    <integer name="num_cols">1</integer>
+    
+    <!-- Large Layout styles -->
+	<dimen name="button_size_large">120dp</dimen>
+	<dimen name="large_margin">16dip</dimen>
+	
+	<integer name="font_size_large">180</integer>
+	
+	
 
 </resources>

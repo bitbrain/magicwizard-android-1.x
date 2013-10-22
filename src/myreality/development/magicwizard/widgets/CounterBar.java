@@ -6,11 +6,13 @@ import myreality.development.magicwizard.layouts.FlipLayout;
 import myreality.development.magicwizard.util.Reloadable;
 import android.app.Activity;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageButton;
 
 public class CounterBar extends FlipLayout implements Reloadable {
@@ -24,6 +26,7 @@ public class CounterBar extends FlipLayout implements Reloadable {
 	public CounterBar(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		initLayout(context);
+		loadFromAttributes(context, attrs);
 	}
 
 	public CounterBar(Context context) {
@@ -99,5 +102,48 @@ public class CounterBar extends FlipLayout implements Reloadable {
 	@Override
 	public void loadFromBundle(Bundle bundle) {
 		setValue(bundle.getInt(String.valueOf(getId())));
+	}
+	
+	protected void loadFromAttributes(Context context, AttributeSet attrs) {
+		
+		TypedArray a = context.obtainStyledAttributes(attrs,
+			    R.styleable.CounterBar);
+		
+		ImageButton btnLeft = (ImageButton) this.findViewById(R.id.btn_count_left);
+		ImageButton btnRight = (ImageButton) this.findViewById(R.id.btn_count_right);	
+
+		final int N = a.getIndexCount();
+
+		for (int i = 0; i < N; ++i)
+		{
+		    int attr = a.getIndex(i);
+		    
+		    switch (attr) {
+		        case R.styleable.CounterBar_buttonSize:
+		        	// Set a new button size
+		        	float buttonSize = a.getDimension(attr, 28.0f);		        		        	
+		        	ViewGroup.LayoutParams leftParams = btnLeft.getLayoutParams();
+		        	ViewGroup.LayoutParams rightParams = btnRight.getLayoutParams();
+		        	
+		        	leftParams.width = (int) buttonSize;
+		        	rightParams.width = (int) buttonSize;
+		        	break;
+		        case R.styleable.CounterBar_fontSize:
+		        	int fontSize = a.getInteger(attr, 28);	
+		        	valueBar.setFontSize(fontSize);
+		        	break;
+		        case R.styleable.CounterBar_minusIcon:
+		        	int minusId = a.getResourceId(attr, R.drawable.ico_minus);
+		        	btnLeft.setImageResource(minusId);
+		        	break;
+		        case R.styleable.CounterBar_plusIcon:
+		        	int plusId = a.getResourceId(attr, R.drawable.ico_plus);
+		        	btnRight.setImageResource(plusId);
+		        	break;
+		        	
+		    }
+		}
+		
+		a.recycle();
 	}
 }
