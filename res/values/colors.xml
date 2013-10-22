@@ -12,4 +12,21 @@
     <color name="life_low">#ab1800</color>
     <color name="poison">#941e5c</color>
     <color name="poison_low">#8400ff</color>
+    
+    <!-- Toast colors -->
+    
+    <color name="toast_text_success">#000000</color>
+    <color name="toast_text_info">#000000</color>
+    <color name="toast_text_warn">#000000</color>
+    <color name="toast_text_fail">#000000</color>
+    
+    <color name="toast_border_success">#000000</color>
+    <color name="toast_border_info">#000000</color>
+    <color name="toast_border_warn">#000000</color>
+    <color name="toast_border_fail">#000000</color>
+    
+    <color name="toast_background_success">#000000</color>
+    <color name="toast_background_info">#000000</color>
+    <color name="toast_background_warn">#000000</color>
+    <color name="toast_background_fail">#000000</color>
 </resources>

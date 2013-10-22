@@ -2,6 +2,7 @@ package myreality.development.magicwizard.util;
 
 import myreality.development.magicwizard.R;
 import android.content.Context;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -32,14 +33,20 @@ public class MagicToast {
 			}
 
 			@Override
-			public int getBackgroundResource() {
-				return R.drawable.darkbutton;
+			public int getFontColorResource() {
+				return R.color.toast_text_success;
 			}
 
 			@Override
-			public int getColorResource() {
-				return R.color.caption;
+			public int getBorderColorResource() {
+				return R.color.toast_border_success;
 			}
+
+			@Override
+			public int getBackgroundColorResource() {
+				return R.color.toast_background_success;
+			}
+
 		},
 	
 		/**
@@ -53,14 +60,20 @@ public class MagicToast {
 			}
 
 			@Override
-			public int getBackgroundResource() {
-				return R.drawable.darkbutton;
+			public int getFontColorResource() {
+				return R.color.toast_text_info;
 			}
 
 			@Override
-			public int getColorResource() {
-				return R.color.caption;
+			public int getBorderColorResource() {
+				return R.color.toast_border_info;
 			}
+
+			@Override
+			public int getBackgroundColorResource() {
+				return R.color.toast_background_info;
+			}
+
 		},
 	
 		/**
@@ -74,13 +87,18 @@ public class MagicToast {
 			}
 
 			@Override
-			public int getBackgroundResource() {
-				return R.drawable.darkbutton;
+			public int getFontColorResource() {
+				return R.color.toast_text_warn;
 			}
 
 			@Override
-			public int getColorResource() {
-				return R.color.caption;
+			public int getBorderColorResource() {
+				return R.color.toast_border_warn;
+			}
+
+			@Override
+			public int getBackgroundColorResource() {
+				return R.color.toast_background_warn;
 			}
 		},
 	
@@ -95,20 +113,25 @@ public class MagicToast {
 			}
 
 			@Override
-			public int getBackgroundResource() {
-				return R.drawable.darkbutton;
+			public int getFontColorResource() {
+				return R.color.toast_text_fail;
 			}
 
 			@Override
-			public int getColorResource() {
-				return R.color.caption;
+			public int getBorderColorResource() {
+				return R.color.toast_border_fail;
+			}
+
+			@Override
+			public int getBackgroundColorResource() {
+				return R.color.toast_background_fail;
 			}
 		};
 		
 		public abstract int getIconResource();		
-		public abstract int getBackgroundResource();
-		public abstract int getColorResource();
-		
+		public abstract int getFontColorResource();
+		public abstract int getBorderColorResource();
+		public abstract int getBackgroundColorResource();
 		
 	}
 	
@@ -137,7 +160,8 @@ public class MagicToast {
 		ImageView imageView = generateImageView(context, type);
 		TextView textView = generateTextView(context, type);
 		textView.setTextSize(25);
-		textView.setText(text);				
+		textView.setText(text);			
+		textView.setGravity(Gravity.CENTER);
 		textView.setPadding(30, 0, 0, 0);
 
 		// Initialize layout
@@ -155,14 +179,17 @@ public class MagicToast {
 	
 	private static TextView generateTextView(Context context, ToastType type) {
 		TextView view = new TextView(context);
-		view.setTextColor(context.getResources().getColor(type.getColorResource()));
+		view.setTextColor(context.getResources().getColor(type.getFontColorResource()));
 		return view;
 		
 	}
 	
 	private static ViewGroup generateLayout(Context context, ToastType type) {
 		LinearLayout layout = new LinearLayout(context);
-		layout.setBackgroundResource(type.getBackgroundResource());
+		
+		// Set background
+		
+		layout.setPadding(30, 30, 30, 30);
 		return layout;
 	}
 }
