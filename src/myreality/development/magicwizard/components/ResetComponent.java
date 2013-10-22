@@ -21,7 +21,9 @@ public class ResetComponent implements Component {
 			Resetable resetable = (Resetable)context;
 			resetable.reset();
 			
-			MagicToast.show(context, "Successfully resetted", ToastType.SUCCESS);
+
+			//MagicToast.show(context, "Successfully resetted", ToastType.SUCCESS);
+			MagicToast.show(context, "An error occured", ToastType.FAIL);
 		}
 	}
 

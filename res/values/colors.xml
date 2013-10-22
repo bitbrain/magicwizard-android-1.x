@@ -18,15 +18,15 @@
     <color name="toast_text_success">#9bf120</color>
     <color name="toast_text_info">#000000</color>
     <color name="toast_text_warn">#000000</color>
-    <color name="toast_text_fail">#000000</color>
+    <color name="toast_text_fail">#e71010</color>
     
     <color name="toast_border_success">#8ec939</color>
     <color name="toast_border_info">#000000</color>
     <color name="toast_border_warn">#000000</color>
-    <color name="toast_border_fail">#000000</color>
+    <color name="toast_border_fail">#b80a0a</color>
     
     <color name="toast_background_success">#7db42f</color>
     <color name="toast_background_info">#000000</color>
     <color name="toast_background_warn">#000000</color>
-    <color name="toast_background_fail">#000000</color>
+    <color name="toast_background_fail">#940000</color>
 </resources>

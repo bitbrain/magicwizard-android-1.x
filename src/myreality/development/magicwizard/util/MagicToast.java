@@ -116,7 +116,7 @@ public class MagicToast {
 
 			@Override
 			public int getIconResource() {
-				return R.drawable.dice;
+				return R.drawable.ico_fail;
 			}
 
 			@Override
