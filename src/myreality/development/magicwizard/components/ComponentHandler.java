@@ -51,4 +51,11 @@ public final class ComponentHandler {
 			component.handle(context, sender);
 		}
 	}
+	
+	public void onActivity(Activity context) {
+		for (int i = 0; i < components.size(); ++i) {
+			Component c = components.valueAt(i);
+			c.onActivity(context);
+		}
+	}
 }

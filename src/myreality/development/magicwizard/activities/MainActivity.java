@@ -49,6 +49,8 @@ public class MainActivity extends MagicActivity {
 		menu.setFadeDegree(1.0f);
 		menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
 		menu.setMenu(R.layout.menu);
+		
+		handler.onActivity(this);
 	}
 	
 	public void onButtonClick(View view) {

@@ -1,14 +1,31 @@
 package myreality.development.magicwizard.components;
 
+import myreality.development.magicwizard.util.MagicToast;
+import myreality.development.magicwizard.util.MagicToast.ToastType;
+import myreality.development.magicwizard.widgets.StateButton;
 import android.app.Activity;
-import android.util.Log;
 import android.view.View;
 
 public class DisplayTimeoutComponent implements Component {
 
 	@Override
 	public void handle(Activity activity, View sender) {
-		Log.d("IT WORKS", "MUAHAHA");
+		
+		if (sender instanceof StateButton) {
+			StateButton button = (StateButton)sender;
+			
+			if (button.isStateEnabled()) {
+				MagicToast.show(activity, "Display timeout disabled", ToastType.FAIL);
+			} else {
+				MagicToast.show(activity, "Display timeout enabled", ToastType.SUCCESS);
+			}
+		}
+	}
+
+	@Override
+	public void onActivity(Activity context) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

@@ -1,10 +1,10 @@
 package myreality.development.magicwizard.widgets;
 
 import myreality.development.magicwizard.R;
+import myreality.development.magicwizard.activities.MainActivity;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
@@ -91,6 +91,13 @@ public class StateButton extends ImageButton implements OnClickListener {
 	public void onClick(View view) {
 		if (view.equals(this)) {
 			setStateEnabled(!isStateEnabled());
+		}
+		
+		// Doing it the hard way: Android supports only one single
+		// OnClickListener. Therefore we have to call the onclick method
+		// manually here
+		if (getContext() instanceof MainActivity) {
+			((MainActivity)getContext()).onButtonClick(this);
 		}
 	}
 

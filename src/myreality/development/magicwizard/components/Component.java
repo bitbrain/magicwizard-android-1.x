@@ -11,6 +11,14 @@ import android.view.View;
  * @version 1.2
  */
 public interface Component {
+	
+	
+	/**
+	 * Is called when added to an activity handler
+	 * 
+	 * @param context
+	 */
+	void onActivity(Activity context);
 
 	/**
 	 * Handles a specific context

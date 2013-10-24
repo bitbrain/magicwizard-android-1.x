@@ -22,4 +22,10 @@ public class RateComponent implements Component {
 		context.startActivity(intent);
 	}
 
+	@Override
+	public void onActivity(Activity context) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

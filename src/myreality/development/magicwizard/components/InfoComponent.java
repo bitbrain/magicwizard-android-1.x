@@ -51,4 +51,10 @@ public class InfoComponent implements Component {
 		txContent.setTypeface(typeface);
 	}
 
+	@Override
+	public void onActivity(Activity context) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

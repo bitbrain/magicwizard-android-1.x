@@ -18,4 +18,10 @@ public class CloseComponent implements Component {
 		context.finish();
 	}
 
+	@Override
+	public void onActivity(Activity context) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
