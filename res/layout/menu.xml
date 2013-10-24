@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/myreality.development.magicwizard"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 <LinearLayout
@@ -54,5 +55,21 @@
             android:onClick="onButtonClick"
             android:background="@drawable/darkbutton"
         />
+        
+        
+        <!-- DISPLAY TIMEOUT -->
+        
+        <myreality.development.magicwizard.widgets.StateButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/btn_timeout"
+            android:contentDescription="@string/app_description" 
+            android:src="@drawable/ico_timeout_enable"
+            android:onClick="onButtonClick"
+            android:background="@drawable/darkbutton"
+            custom:iconEnabled="@drawable/ico_timeout_enable"
+            custom:iconDisabled="@drawable/ico_timeout_disable"
+        />
+        
     </LinearLayout>
 </ScrollView>

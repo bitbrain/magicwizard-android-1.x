@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.graphics.Typeface;
+import android.view.View;
 import android.widget.TextView;
 
 /**
@@ -23,7 +24,7 @@ public class InfoComponent implements Component {
 	}
 
 	@Override
-	public void handle(Activity context) {
+	public void handle(Activity context, View sender) {
 		Builder builder = new Builder(context);
 		AlertDialog alert = builder
 				.setView(

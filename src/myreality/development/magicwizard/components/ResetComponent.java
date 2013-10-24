@@ -4,6 +4,7 @@ import myreality.development.magicwizard.util.MagicToast;
 import myreality.development.magicwizard.util.MagicToast.ToastType;
 import myreality.development.magicwizard.util.Resetable;
 import android.app.Activity;
+import android.view.View;
 
 /**
  * Handles the resetting behavior for context
@@ -16,7 +17,7 @@ import android.app.Activity;
 public class ResetComponent implements Component {
 
 	@Override
-	public void handle(Activity context) {
+	public void handle(Activity context, View sender) {
 		if (context instanceof Resetable) {
 			Resetable resetable = (Resetable)context;
 			resetable.reset();

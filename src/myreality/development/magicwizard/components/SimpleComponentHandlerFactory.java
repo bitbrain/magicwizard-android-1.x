@@ -29,6 +29,7 @@ public class SimpleComponentHandlerFactory implements ComponentHandlerFactory {
 		handler.add(R.id.btn_rate, new RateComponent());
 		handler.add(R.id.btn_close, new CloseComponent());
 		handler.add(R.id.btn_info, new InfoComponent(typeface));
+		handler.add(R.id.btn_timeout, new DisplayTimeoutComponent());
 		
 		return handler;
 	}

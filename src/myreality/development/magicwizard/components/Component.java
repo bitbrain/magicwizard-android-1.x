@@ -1,6 +1,7 @@
 package myreality.development.magicwizard.components;
 
 import android.app.Activity;
+import android.view.View;
 
 /**
  * Handles a specific behavior
@@ -16,5 +17,5 @@ public interface Component {
 	 * 
 	 * @param context
 	 */
-	void handle(Activity context);
+	void handle(Activity context, View sender);
 }

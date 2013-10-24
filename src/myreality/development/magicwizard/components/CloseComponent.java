@@ -1,6 +1,7 @@
 package myreality.development.magicwizard.components;
 
 import android.app.Activity;
+import android.view.View;
 
 /**
  * Handles the closing of the app
@@ -13,7 +14,7 @@ import android.app.Activity;
 public class CloseComponent implements Component {
 
 	@Override
-	public void handle(Activity context) {
+	public void handle(Activity context, View sender) {
 		context.finish();
 	}
 
