@@ -69,6 +69,11 @@ The basic concept of this app is to create components and map them to a specific
 
 ```java
 public class MyComponent implements Component {
+
+	@Override
+	public void onActivity(Activity context) {
+ 	       // Is called after layout is loaded
+	}
 	
 	@Override
 	public void handle(Activity context) {
