@@ -32,6 +32,47 @@
             android:background="@drawable/darkbutton"
         />
         
+        
+        <!-- DISPLAY TIMEOUT -->
+        
+        <myreality.development.magicwizard.widgets.StateButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/btn_timeout"
+            android:contentDescription="@string/app_description" 
+            android:src="@drawable/ico_timeout_enable"
+            android:onClick="onButtonClick"
+            android:background="@drawable/darkbutton"
+            custom:iconEnabled="@drawable/ico_timeout_enable"
+            custom:iconDisabled="@drawable/ico_timeout_disable"
+        />
+        
+        <!--LIFE GAP -->
+        
+        <ImageButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/btn_lifegap"
+            android:contentDescription="@string/app_description" 
+            android:src="@drawable/ico_lifegap"
+            android:onClick="onButtonClick"
+            android:background="@drawable/darkbutton"
+        />
+        
+        <!-- PLAYER MODE -->
+        
+        <myreality.development.magicwizard.widgets.StateButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/btn_player"
+            android:contentDescription="@string/app_description" 
+            android:src="@drawable/ico_oneplayer"
+            android:onClick="onButtonClick"
+            android:background="@drawable/darkbutton"
+            custom:iconEnabled="@drawable/ico_oneplayer"
+            custom:iconDisabled="@drawable/ico_twoplayer"
+        />
+        
         <!-- INFO -->
         
         <ImageButton
@@ -54,21 +95,6 @@
             android:src="@drawable/ico_rate"
             android:onClick="onButtonClick"
             android:background="@drawable/darkbutton"
-        />
-        
-        
-        <!-- DISPLAY TIMEOUT -->
-        
-        <myreality.development.magicwizard.widgets.StateButton
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:id="@+id/btn_timeout"
-            android:contentDescription="@string/app_description" 
-            android:src="@drawable/ico_timeout_enable"
-            android:onClick="onButtonClick"
-            android:background="@drawable/darkbutton"
-            custom:iconEnabled="@drawable/ico_timeout_enable"
-            custom:iconDisabled="@drawable/ico_timeout_disable"
         />
         
     </LinearLayout>

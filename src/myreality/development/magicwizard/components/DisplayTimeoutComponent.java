@@ -6,6 +6,13 @@ import myreality.development.magicwizard.widgets.StateButton;
 import android.app.Activity;
 import android.view.View;
 
+/**
+ * Handles display timeout
+ * 
+ * @author Miguel Gonzalez <miguel-gonzalez@gmx.de>
+ * @since 1.2
+ * @version 1.2
+ */
 public class DisplayTimeoutComponent implements Component {
 
 	@Override
