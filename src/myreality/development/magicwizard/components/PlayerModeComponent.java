@@ -45,13 +45,12 @@ public class PlayerModeComponent extends PreferencesComponent {
 	}
 
 	private void setTwoPlayerMode(Activity context, boolean twoPlayerMode) {
-
+		
 		if (twoPlayerMode) {
 			context.setContentView(R.layout.main_two_players);
 		} else {
 			context.setContentView(R.layout.main);
 		}
-		
 	}
 	
 	public boolean isTwoPlayerMode() {

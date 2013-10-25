@@ -7,10 +7,7 @@ import myreality.development.magicwizard.util.Clearable;
 import myreality.development.magicwizard.util.Reloadable;
 import myreality.development.magicwizard.util.Resetable;
 import android.app.Activity;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
-import android.view.WindowManager;
 
 /**
  * Basic activity that provides helpful functions
