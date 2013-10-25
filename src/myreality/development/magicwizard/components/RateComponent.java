@@ -23,7 +23,19 @@ public class RateComponent implements Component {
 	}
 
 	@Override
-	public void onActivity(Activity context) {
+	public void onCreate(Activity context) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onDestroy(Activity context) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onPause(Activity context) {
 		// TODO Auto-generated method stub
 		
 	}

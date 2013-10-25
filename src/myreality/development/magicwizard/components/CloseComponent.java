@@ -9,19 +9,31 @@ import android.view.View;
  * @author Miguel Gonzalez <miguel-gonzalez@gmx.de>
  * @since 1.2
  * @version 1.2
- *
+ * 
  */
 public class CloseComponent implements Component {
 
 	@Override
-	public void handle(Activity context, View sender) {
-		context.finish();
+	public void onCreate(Activity context) {
+		// TODO Auto-generated method stub
+
 	}
 
 	@Override
-	public void onActivity(Activity context) {
+	public void onDestroy(Activity context) {
 		// TODO Auto-generated method stub
-		
+
+	}
+
+	@Override
+	public void onPause(Activity context) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void handle(Activity context, View sender) {
+		context.finish();
 	}
 
 }

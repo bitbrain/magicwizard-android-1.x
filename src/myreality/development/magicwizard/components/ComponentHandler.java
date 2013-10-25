@@ -55,7 +55,7 @@ public final class ComponentHandler {
 	public void onActivity(Activity context) {
 		for (int i = 0; i < components.size(); ++i) {
 			Component c = components.valueAt(i);
-			c.onActivity(context);
+			c.onCreate(context);
 		}
 	}
 }

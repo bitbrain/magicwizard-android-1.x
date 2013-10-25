@@ -10,14 +10,9 @@ import android.view.View;
  * @since 1.2
  * @version 1.2
  */
-public class PlayerModeComponent implements Component {
+public class PlayerModeComponent extends PreferencesComponent {
 
-	@Override
-	public void onActivity(Activity context) {
-		// TODO Auto-generated method stub
-
-	}
-
+	
 	@Override
 	public void handle(Activity context, View sender) {
 		// TODO Auto-generated method stub

@@ -10,13 +10,7 @@ import android.view.View;
  * @since 1.2
  * @version 1.2
  */
-public class LifeGapComponent implements Component {
-
-	@Override
-	public void onActivity(Activity context) {
-		// TODO Auto-generated method stub
-		
-	}
+public class LifeGapComponent extends PreferencesComponent {
 
 	@Override
 	public void handle(Activity context, View sender) {

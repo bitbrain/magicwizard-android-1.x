@@ -18,7 +18,21 @@ public interface Component {
 	 * 
 	 * @param context
 	 */
-	void onActivity(Activity context);
+	void onCreate(Activity context);
+	
+	/**
+	 * Is called when the target activity gets destroyed
+	 * 
+	 * @param context
+	 */
+	void onDestroy(Activity context);
+	
+	/**
+	 * Is called when the target activity gets paused
+	 * 
+	 * @param context
+	 */
+	void onPause(Activity context);
 
 	/**
 	 * Handles a specific context
