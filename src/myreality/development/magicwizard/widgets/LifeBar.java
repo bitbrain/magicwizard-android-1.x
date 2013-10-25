@@ -1,6 +1,7 @@
 package myreality.development.magicwizard.widgets;
 
 import myreality.development.magicwizard.R;
+import myreality.development.magicwizard.components.LifeGapComponent;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -53,12 +54,10 @@ public class LifeBar extends CounterBar {
 		SharedPreferences settings =
 				activity.getSharedPreferences(
 						activity.getPackageName() + "_preferences", Context.MODE_PRIVATE);
-		int defaultValue = Integer.valueOf(settings.getString("set_life_points", "20"));
+		int defaultValue = Integer.valueOf(settings.getString(LifeGapComponent.LIFE_GAP, "20"));
 
-		setRuleDefault(defaultValue);
-		//if (reset) {		
-			setValue(defaultValue);
-		//}
+		setRuleDefault(defaultValue);	
+		setValue(defaultValue);
 	}	
 	
 	

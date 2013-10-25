@@ -2,6 +2,7 @@ package myreality.development.magicwizard.components;
 
 import android.app.Activity;
 import android.util.SparseArray;
+import android.view.View;
 
 /**
  * Handles components by calling them by ID
@@ -43,11 +44,39 @@ public final class ComponentHandler {
 	 * @param id
 	 * @param context
 	 */
-	public void handle(Integer id, Activity context) {
+	public void handle(Integer id, Activity context, View sender) {
 		Component component = components.get(id);
 		
 		if (component != null) {
-			component.handle(context);
+			component.handle(context, sender);
+		}
+	}
+	
+	public void onCreate(Activity context) {
+		for (int i = 0; i < components.size(); ++i) {
+			Component c = components.valueAt(i);
+			c.onCreate(context);
+		}
+	}
+	
+	public void onDestroy(Activity context) {
+		for (int i = 0; i < components.size(); ++i) {
+			Component c = components.valueAt(i);
+			c.onDestroy(context);
+		}
+	}
+
+	public void onPause(Activity context) {
+		for (int i = 0; i < components.size(); ++i) {
+			Component c = components.valueAt(i);
+			c.onPause(context);
+		}
+	}
+
+	public void onResume(Activity context) {
+		for (int i = 0; i < components.size(); ++i) {
+			Component c = components.valueAt(i);
+			c.onResume(context);
 		}
 	}
 }

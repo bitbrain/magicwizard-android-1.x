@@ -49,13 +49,27 @@ public class MainActivity extends MagicActivity {
 		menu.setFadeDegree(1.0f);
 		menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
 		menu.setMenu(R.layout.menu);
+		
+		handler.onCreate(this);
 	}
 	
 	public void onButtonClick(View view) {
-		handler.handle(view.getId(), this);
+		handler.handle(view.getId(), this, view);
 		menu.showContent(true);
 	}
-	
+
+	@Override
+	public void setContentView(int layoutResID) {
+		
+		clear();
+		
+		if (menu != null) {
+			menu.setContent(layoutResID);
+		} else {
+			super.setContentView(layoutResID);
+		}
+	}
+
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -66,6 +80,7 @@ public class MainActivity extends MagicActivity {
 		super.onResume();
 		reset();
 		load(bundle);
+		handler.onResume(this);
 	}
 
 	/*
@@ -77,6 +92,15 @@ public class MainActivity extends MagicActivity {
 	protected void onPause() {
 		super.onPause();
 		save(bundle);
+		handler.onPause(this);
+	}
+	
+	
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		handler.onDestroy(this);
 	}
 
 	@Override

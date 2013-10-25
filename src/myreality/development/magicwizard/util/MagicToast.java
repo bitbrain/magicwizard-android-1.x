@@ -135,7 +135,7 @@ public class MagicToast {
 		}
 		
 		Toast toast = new Toast(context);	
-		toast.setView(generateToastView(context, text, type));		
+		toast.setView(generateToastView(context, text, type));	
 		toast.show();
 	}
 	
@@ -150,7 +150,7 @@ public class MagicToast {
 		textView.setTextSize(36);
 		textView.setText(text);			
 		textView.setGravity(Gravity.CENTER);
-		textView.setPadding(30, 0, 0, 0);
+		textView.setPadding(20, 0, 0, 0);
 
 		// Initialize layout
 		layout.addView(imageView);
@@ -180,7 +180,12 @@ public class MagicToast {
 		// Set background
 		layout.setBackgroundDrawable(generateDrawable(context, type));
 		
-		layout.setPadding(30, 30, 30, 30);
+		layout.setLayoutParams(new ViewGroup.LayoutParams(
+		        ViewGroup.LayoutParams.WRAP_CONTENT,
+		        ViewGroup.LayoutParams.WRAP_CONTENT));
+		
+		int padding = 20;
+		layout.setPadding(padding, padding, padding, padding);
 		return layout;
 	}
 	

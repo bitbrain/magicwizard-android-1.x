@@ -3,6 +3,7 @@ package myreality.development.magicwizard.components;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
+import android.view.View;
 
 /**
  * Handles the rating of this app
@@ -11,10 +12,10 @@ import android.net.Uri;
  * @since 1.2
  * @version 1.2
  */
-public class RateComponent implements Component {
+public class RateComponent extends AbstractComponent implements Component {
 
 	@Override
-	public void handle(Activity context) {
+	public void handle(Activity context, View sender) {
 		Intent intent = new Intent(Intent.ACTION_VIEW);
 		intent.setData(Uri
 				.parse("market://details?id=myreality.development.magicwizard"));

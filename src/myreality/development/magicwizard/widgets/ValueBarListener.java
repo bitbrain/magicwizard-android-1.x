@@ -2,6 +2,7 @@ package myreality.development.magicwizard.widgets;
 
 import myreality.development.magicwizard.layouts.FlipLayout;
 import android.content.Context;
+import android.os.Vibrator;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
 import android.view.View;
@@ -11,8 +12,11 @@ public class ValueBarListener implements OnTouchListener {
 
 	private VelocityTracker vTracker = null;
 	private float oldX = 0;
+
+	private Vibrator vibrator;
 	
 	public ValueBarListener(Context context) {
+		vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
 	}
 
 	@Override
@@ -31,7 +35,7 @@ public class ValueBarListener implements OnTouchListener {
 				vTracker.addMovement(event);
 
 				oldX = event.getRawX();
-				if (bar.getValue() <= bar.getMaximum()) {
+				if (bar.getValue() <= bar.getMaximum() && bar.getValue() >= 0) {
 					setBarValue(bar, oldX);
 				}
 				break;
@@ -45,15 +49,17 @@ public class ValueBarListener implements OnTouchListener {
 				// event.getRawX(); and event.getRawY(); coordinates are where you
 				// touched
 	
-				if (bar.getValue() > bar.getMaximum()) {
+				if (bar.getValue() > bar.getMaximum() || bar.getValue() < 0) {
 					float velocity = vTracker.getXVelocity();
 	
 					if (velocity > 0) {
 						for (float i = 0; i < velocity; ++i) {
+							vibrator.vibrate(5);
 							bar.plus();
 						}
 					} else {
 						for (float i = velocity; i < 0; ++i) {
+							vibrator.vibrate(5);
 							bar.minus();
 						}
 					}
@@ -103,7 +109,8 @@ public class ValueBarListener implements OnTouchListener {
 			}
 		}
 		
-		if (newValue >= 0) {
+		if (newValue - bar.getValue() != 0) {			
+			vibrator.vibrate(10);	
 			bar.setValue(newValue);
 			bar.invalidate();
 		}

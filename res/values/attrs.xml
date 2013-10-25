@@ -8,6 +8,12 @@
         <attr name="eyeCount" format="integer"/>        
     </declare-styleable>
     
+    <declare-styleable name="StateButton">
+        <attr name="stateEnabled" format="boolean"/>  
+        <attr name="iconEnabled" format="reference"/> 
+        <attr name="iconDisabled" format="reference"/>       
+    </declare-styleable>
+    
     <declare-styleable name="CounterBar">
         <attr name="fontSize" format="integer"/>   
         <attr name="buttonSize" format="dimension|reference"/>  

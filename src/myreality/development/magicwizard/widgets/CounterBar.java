@@ -42,10 +42,12 @@ public class CounterBar extends FlipLayout implements Reloadable {
 	
 	public void plus() {
 		valueBar.plus();
+		vibrator.vibrate(5);
 	}
 	
 	public void minus() {
 		valueBar.minus();
+		vibrator.vibrate(5);
 	}
 	
 	public void setValue(int value) {

@@ -4,18 +4,20 @@ import android.app.Activity;
 import android.view.View;
 
 /**
- * Handles the closing of the app
+ * Handles life gap
  * 
  * @author Miguel Gonzalez <miguel-gonzalez@gmx.de>
  * @since 1.2
  * @version 1.2
- * 
  */
-public class CloseComponent extends AbstractComponent implements Component {
+public class LifeGapComponent extends PreferencesComponent {
+	
+	public static final String LIFE_GAP = "LIFE_GAP";
 
 	@Override
 	public void handle(Activity context, View sender) {
-		context.finish();
+		// TODO Auto-generated method stub
+		
 	}
 
 }
