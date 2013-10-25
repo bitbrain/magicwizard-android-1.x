@@ -11,7 +11,7 @@ import android.content.SharedPreferences;
  * @since 1.2
  * @version 1.2
  */
-public abstract class PreferencesComponent implements Component {
+public abstract class PreferencesComponent extends AbstractComponent implements Component {
 	
 	private SharedPreferences preferences;
 
@@ -19,16 +19,6 @@ public abstract class PreferencesComponent implements Component {
 	public void onCreate(Activity context) {
 		preferences = context.getSharedPreferences(
         		context.getPackageName() + "_preferences", Context.MODE_PRIVATE);
-	}
-
-	@Override
-	public void onDestroy(Activity context) {
-		
-	}
-
-	@Override
-	public void onPause(Activity context) {
-		
 	}
 	
 	public SharedPreferences getPreferences() {

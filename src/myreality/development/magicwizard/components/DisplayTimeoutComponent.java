@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.view.View;
+import android.view.WindowManager;
 
 /**
  * Handles display timeout
@@ -51,6 +52,14 @@ public class DisplayTimeoutComponent extends PreferencesComponent {
 		Editor editor = settings.edit();
         editor.putBoolean(DISPLAY_TIMEOUT, state);
         editor.commit();
+	}
+	
+	private void setDisplayTimeout(Activity context, boolean state) {
+		if (state) {
+			context.getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+		} else {
+			context.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+		}
 	}
 
 }

@@ -33,6 +33,13 @@ public interface Component {
 	 * @param context
 	 */
 	void onPause(Activity context);
+	
+	/**
+	 * Is called when resuming an activity
+	 * 
+	 * @param context
+	 */
+	void onResume(Activity context);
 
 	/**
 	 * Handles a specific context

@@ -12,7 +12,7 @@ import android.view.View;
  * @since 1.2
  * @version 1.2
  */
-public class RateComponent implements Component {
+public class RateComponent extends AbstractComponent implements Component {
 
 	@Override
 	public void handle(Activity context, View sender) {
@@ -20,24 +20,6 @@ public class RateComponent implements Component {
 		intent.setData(Uri
 				.parse("market://details?id=myreality.development.magicwizard"));
 		context.startActivity(intent);
-	}
-
-	@Override
-	public void onCreate(Activity context) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void onDestroy(Activity context) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void onPause(Activity context) {
-		// TODO Auto-generated method stub
-		
 	}
 
 }
