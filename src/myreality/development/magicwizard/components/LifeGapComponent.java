@@ -11,6 +11,8 @@ import android.view.View;
  * @version 1.2
  */
 public class LifeGapComponent extends PreferencesComponent {
+	
+	public static final String LIFE_GAP = "LIFE_GAP";
 
 	@Override
 	public void handle(Activity context, View sender) {

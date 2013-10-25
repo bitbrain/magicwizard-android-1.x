@@ -3,6 +3,7 @@ package myreality.development.magicwizard.widgets;
 import java.util.Random;
 
 import myreality.development.magicwizard.R;
+import myreality.development.magicwizard.layouts.FlipLayout;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.Context;
@@ -11,7 +12,6 @@ import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 /**
@@ -21,7 +21,7 @@ import android.widget.TextView;
  * @version 1.1
  * @since 1.1
  */
-public class DiceView extends LinearLayout {
+public class DiceView extends FlipLayout {
 	
 	private LayoutInflater inflater;
 	

@@ -24,7 +24,6 @@ import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Parcelable;
-import android.os.Vibrator;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -40,8 +39,6 @@ public class ValueBar extends View {
 	private Paint paint;
 	
 	private Integer capLow, capHigh;
-	
-	private Vibrator vibrator;
 	
 	private int fontSize;
 
@@ -88,8 +85,6 @@ public class ValueBar extends View {
 			}
 			refreshBuffer();
 			invalidate();
-
-			vibrator.vibrate(5);
 		}
 	}
 	
@@ -210,7 +205,6 @@ public class ValueBar extends View {
 		setMaximum(10);
 		setValue(0);
 		capLow = null; capHigh = null;
-		vibrator = (Vibrator) getContext().getSystemService(Context.VIBRATOR_SERVICE);
 		setOnTouchListener(new ValueBarListener(context));
 		type = Typeface.createFromAsset(context.getAssets(),"fonts/fritzbold.ttf");
 	}
