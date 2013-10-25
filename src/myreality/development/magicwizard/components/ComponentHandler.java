@@ -52,10 +52,31 @@ public final class ComponentHandler {
 		}
 	}
 	
-	public void onActivity(Activity context) {
+	public void onCreate(Activity context) {
 		for (int i = 0; i < components.size(); ++i) {
 			Component c = components.valueAt(i);
 			c.onCreate(context);
+		}
+	}
+	
+	public void onDestroy(Activity context) {
+		for (int i = 0; i < components.size(); ++i) {
+			Component c = components.valueAt(i);
+			c.onDestroy(context);
+		}
+	}
+
+	public void onPause(Activity context) {
+		for (int i = 0; i < components.size(); ++i) {
+			Component c = components.valueAt(i);
+			c.onPause(context);
+		}
+	}
+
+	public void onResume(Activity context) {
+		for (int i = 0; i < components.size(); ++i) {
+			Component c = components.valueAt(i);
+			c.onResume(context);
 		}
 	}
 }

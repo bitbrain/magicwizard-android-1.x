@@ -23,8 +23,34 @@ public class DisplayTimeoutComponent extends PreferencesComponent {
 	@Override
 	public void onCreate(Activity context) {
 		super.onCreate(context);
-		loadFromPreferences(context);
-	}	
+		setDisplayTimeout(context, isEnabled());
+	}
+	
+	
+	
+	@Override
+	public void onDestroy(Activity context) {
+		super.onDestroy(context);
+		setDisplayTimeout(context, false);
+	}
+
+
+
+	@Override
+	public void onPause(Activity context) {
+		super.onPause(context);
+		setDisplayTimeout(context, false);
+	}
+
+
+
+	@Override
+	public void onResume(Activity context) {
+		super.onResume(context);
+		setDisplayTimeout(context, isEnabled());
+	}
+
+
 
 	@Override
 	public void handle(Activity activity, View sender) {
@@ -33,8 +59,8 @@ public class DisplayTimeoutComponent extends PreferencesComponent {
 			
 			StateButton button = (StateButton)sender;
 			
+			setDisplayTimeout(activity, button.isStateEnabled());
 			saveToPreferences(activity, button.isStateEnabled());
-			
 			if (button.isStateEnabled()) {
 				MagicToast.show(activity, "Display timeout enabled", ToastType.SUCCESS);
 			} else {
@@ -43,8 +69,12 @@ public class DisplayTimeoutComponent extends PreferencesComponent {
 		}
 	}
 	
-	private void loadFromPreferences(Activity context) {
-		SharedPreferences settings = getPreferences();
+	public boolean isEnabled() {
+		if (getPreferences() != null) {
+			return getPreferences().getBoolean(DISPLAY_TIMEOUT, false);
+		} else {
+			return false;
+		}
 	}
 	
 	private void saveToPreferences(Activity context, Boolean state) {

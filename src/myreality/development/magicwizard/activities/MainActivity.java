@@ -50,7 +50,7 @@ public class MainActivity extends MagicActivity {
 		menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
 		menu.setMenu(R.layout.menu);
 		
-		handler.onActivity(this);
+		handler.onCreate(this);
 	}
 	
 	public void onButtonClick(View view) {
@@ -68,6 +68,7 @@ public class MainActivity extends MagicActivity {
 		super.onResume();
 		reset();
 		load(bundle);
+		handler.onResume(this);
 	}
 
 	/*
@@ -79,6 +80,15 @@ public class MainActivity extends MagicActivity {
 	protected void onPause() {
 		super.onPause();
 		save(bundle);
+		handler.onPause(this);
+	}
+	
+	
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		handler.onDestroy(this);
 	}
 
 	@Override
