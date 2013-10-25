@@ -22,88 +22,9 @@ import android.view.WindowManager;
 public class MagicActivity extends Activity implements Resetable, Clearable, BundleIO {
 		
 	private HashSet<Reloadable> reloadables;
-	private SharedPreferences settings;
-	
-	
-	
-	
+		
 	public MagicActivity() {
 		reloadables = new HashSet<Reloadable>();
-	}
-
-	/* (non-Javadoc)
-	 * @see android.app.Activity#onCreate(android.os.Bundle)
-	 */
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		settings = getSharedPreferences(getPackageName() + "_preferences", MODE_PRIVATE);
-	}
-
-
-
-
-
-	/* (non-Javadoc)
-	 * @see android.app.Activity#onPause()
-	 */
-	@Override
-	protected void onPause() {
-		super.onPause();		
-		Editor editor = settings.edit();
-		editor.putString("lastActivity", getClass().getSimpleName());
-		editor.commit();
-		clearDisplayTimeout();
-	}
-	
-	
-	
-	
-	/* (non-Javadoc)
-	 * @see android.app.Activity#onDestroy()
-	 */
-	@Override
-	protected void onDestroy() {
-		super.onDestroy();
-		clearDisplayTimeout();
-	}
-
-	/* (non-Javadoc)
-	 * @see android.app.Activity#onResume()
-	 */
-	@Override
-	protected void onResume() {
-		super.onResume();
-		checkDisplayTimeout();
-	}
-
-	/**
-	 * @return True, when single player mode is active
-	 */
-	protected boolean isSinglePlayerMode() {
-		return !settings.getBoolean("enable_two_player_mode", false);
-	}
-	
-	
-	protected void clearDisplayTimeout() {
-		getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-	}
-	
-	protected void enableDisplayTimeout() {
-		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-	}
-	
-	protected void checkDisplayTimeout() {
-			if (settings.getBoolean("disable_screen_lock", false)) {			
-				enableDisplayTimeout();
-			} else {
-				clearDisplayTimeout();
-			}
-	}
-	
-	
-	protected String getLastActivity() {
-		return settings.getString("lastActivity", "");
 	}
 
 	

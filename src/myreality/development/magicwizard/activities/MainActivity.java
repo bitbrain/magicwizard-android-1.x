@@ -57,9 +57,17 @@ public class MainActivity extends MagicActivity {
 		handler.handle(view.getId(), this, view);
 		menu.showContent(true);
 	}
-	
-	public SlidingMenu getMenu() {
-		return menu;
+
+	@Override
+	public void setContentView(int layoutResID) {
+		
+		clear();
+		
+		if (menu != null) {
+			menu.setContent(layoutResID);
+		} else {
+			super.setContentView(layoutResID);
+		}
 	}
 
 	/*
