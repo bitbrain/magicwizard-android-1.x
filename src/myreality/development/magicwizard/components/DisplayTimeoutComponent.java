@@ -61,6 +61,7 @@ public class DisplayTimeoutComponent extends PreferencesComponent {
 			
 			setDisplayTimeout(activity, button.isStateEnabled());
 			saveToPreferences(activity, button.isStateEnabled());
+			
 			if (button.isStateEnabled()) {
 				MagicToast.show(activity, "Display timeout enabled", ToastType.SUCCESS);
 			} else {

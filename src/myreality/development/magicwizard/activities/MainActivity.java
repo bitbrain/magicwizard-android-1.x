@@ -58,6 +58,10 @@ public class MainActivity extends MagicActivity {
 		menu.showContent(true);
 	}
 	
+	public SlidingMenu getMenu() {
+		return menu;
+	}
+
 	/*
 	 * (non-Javadoc)
 	 * 
