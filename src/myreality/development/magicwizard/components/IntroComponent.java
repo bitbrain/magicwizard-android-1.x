@@ -1,6 +1,7 @@
 package myreality.development.magicwizard.components;
 
 import myreality.development.magicwizard.R;
+import myreality.development.magicwizard.components.core.PreferencesComponent;
 import myreality.development.magicwizard.util.InfoGenerator;
 import android.app.Activity;
 import android.app.AlertDialog;

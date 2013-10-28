@@ -1,6 +1,14 @@
-package myreality.development.magicwizard.components;
+package myreality.development.magicwizard.components.core;
 
 import myreality.development.magicwizard.R;
+import myreality.development.magicwizard.components.CloseComponent;
+import myreality.development.magicwizard.components.DisplayTimeoutComponent;
+import myreality.development.magicwizard.components.InfoComponent;
+import myreality.development.magicwizard.components.IntroComponent;
+import myreality.development.magicwizard.components.LifeGapComponent;
+import myreality.development.magicwizard.components.PlayerModeComponent;
+import myreality.development.magicwizard.components.RateComponent;
+import myreality.development.magicwizard.components.ResetComponent;
 import android.app.Activity;
 import android.graphics.Typeface;
 

@@ -1,9 +1,9 @@
 package myreality.development.magicwizard.activities;
 
 import myreality.development.magicwizard.R;
-import myreality.development.magicwizard.components.ComponentHandler;
-import myreality.development.magicwizard.components.ComponentHandlerFactory;
-import myreality.development.magicwizard.components.SimpleComponentHandlerFactory;
+import myreality.development.magicwizard.components.core.ComponentHandler;
+import myreality.development.magicwizard.components.core.ComponentHandlerFactory;
+import myreality.development.magicwizard.components.core.SimpleComponentHandlerFactory;
 import android.os.Bundle;
 import android.view.View;
 

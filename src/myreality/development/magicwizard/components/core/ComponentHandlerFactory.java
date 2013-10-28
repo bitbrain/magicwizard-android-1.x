@@ -1,4 +1,4 @@
-package myreality.development.magicwizard.components;
+package myreality.development.magicwizard.components.core;
 
 /**
  * Factory in order to create component handlers

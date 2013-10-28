@@ -1,5 +1,7 @@
 package myreality.development.magicwizard.components;
 
+import myreality.development.magicwizard.components.core.AbstractComponent;
+import myreality.development.magicwizard.components.core.Component;
 import myreality.development.magicwizard.util.MagicToast;
 import myreality.development.magicwizard.util.MagicToast.ToastType;
 import myreality.development.magicwizard.util.Resetable;

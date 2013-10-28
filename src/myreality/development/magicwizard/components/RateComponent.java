@@ -1,5 +1,7 @@
 package myreality.development.magicwizard.components;
 
+import myreality.development.magicwizard.components.core.AbstractComponent;
+import myreality.development.magicwizard.components.core.Component;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;

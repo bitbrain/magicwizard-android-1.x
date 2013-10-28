@@ -1,5 +1,6 @@
 package myreality.development.magicwizard.components;
 
+import myreality.development.magicwizard.components.core.PreferencesComponent;
 import android.app.Activity;
 import android.view.View;
 

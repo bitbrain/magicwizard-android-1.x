@@ -1,4 +1,4 @@
-package myreality.development.magicwizard.components;
+package myreality.development.magicwizard.components.core;
 
 import android.app.Activity;
 import android.view.View;
