@@ -63,6 +63,15 @@ README.md                                 <- Documentation of the software
 
 Before you write a single line of code, ensure that you're in the right branch. Never touch the ```master``` branch. Instead, use always the active milestone branch as a reference.
 
+### Language support
+
+If you want to add a language, create a new folder in ```res```, called ```values_xx``` where ```xx``` is the language code of your country. Afterwards copu the existing ```strings.xml``` file from ```values_en``` into your folder and rewrite the content to your language. Afterwards create a pull request with an explanation which language you have chosen.
+
+Currently are the following languages supported:
+
+* German (de)
+* English (en)
+
 ### Components
 
 The basic concept of this app is to create components and map them to a specific view. Each view has an own id. Without going into much detail, you can write an own component:
