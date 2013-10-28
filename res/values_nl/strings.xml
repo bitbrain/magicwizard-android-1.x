@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- General -->
+    
+    <string name="app_description">Deze tool is gemaakt om life points en poison counters bij te houden voor het spel \"Magic - The Gathering\".\n
+                                   \nDeze applicatie is ontwikkeld door Miguel Gonzalez.\n
+                                   \n</string>
+           <string name="app_tipp">Tip: Veeg van links naar rechts om het nieuwe menu te openen!</string>
+    
+    <!-- Menu -->    
+    
+    <string name="opt_info">Informatie</string>
+    <string name="opt_warning">Waarschuwing!</string> 
+    <string name="txt_quit">Sluiten</string>
+    <string name="opt_startup">Niet meer laten zien bij het opstarten</string>
+    
+    <!-- Buttons -->
+    
+    <string name="sf_ok">OK</string>
+    <string name="sf_abort">Annuleren</string>
+    
+    <!-- Dices -->
+    
+          <string name="tx_dices_result">Resultaat</string>
+          
+           
+</resources>
