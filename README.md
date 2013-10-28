@@ -69,8 +69,8 @@ If you want to add a language, create a new folder in ```res```, called ```value
 
 Currently are the following languages supported:
 
-* German (de)
-* English (en)
+* **German** (de)
+* **English** (en)
 
 ### Components
 
