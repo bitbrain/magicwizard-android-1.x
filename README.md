@@ -71,6 +71,8 @@ Currently are the following languages supported:
 
 * **German** (de)
 * **English** (en)
+* **French** (fr)
+* **Dutch** (nl)
 
 Feel free to submit new translations!
 
