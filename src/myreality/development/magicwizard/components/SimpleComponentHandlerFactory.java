@@ -32,6 +32,7 @@ public class SimpleComponentHandlerFactory implements ComponentHandlerFactory {
 		handler.add(R.id.btn_timeout, new DisplayTimeoutComponent());
 		handler.add(R.id.btn_player, new PlayerModeComponent());
 		handler.add(R.id.btn_lifegap, new LifeGapComponent());
+		handler.add(0, new IntroComponent(typeface));
 		
 		return handler;
 	}

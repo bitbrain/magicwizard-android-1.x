@@ -1,51 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
-    <!-- Anwendungsspezifische Zeichenketten -->
+    <!-- General -->
     
     <string name="app_description">This tool is written to count life points and poison counters for the game \"Magic - The Gathering\".\n
                                    \nThis app has been developed by Miguel Gonzalez.\n
                                    \n</string>
+   	<string name="app_tipp">Tipp: Swipe from left to right to open the new menu!</string>
     
-    <!-- Menu-Zeichenketten -->    
-    <string name="opt_reset">Reset</string>
-    <string name="opt_preferences">Preferences</string>
+    <!-- Menu -->    
+    
     <string name="opt_info">Information</string>
-    <string name="opt_warning">Warning!</string>    
-    <string name="opt_rate">Rate app!</string>    
-    <string name="opt_close">Close</string>
-    <string name="txt_reset">Reset</string>
-    <string name="txt_menu">Menu</string>
-    <string name="txt_dice">Dice</string>
+    <string name="opt_warning">Warning!</string> 
     <string name="txt_quit">Close</string>
-    <string name="tx_register">Register</string>
-    <string name="tx_sign_in">Sign in</string>
+    <string name="opt_startup">Do not show on next startup</string>
     
-    <!-- Schaltflaechen -->
+    <!-- Buttons -->
     
     <string name="sf_ok">OK</string>
     <string name="sf_abort">Abort</string>
     
-    <!-- TextViews und Captions -->
+    <!-- Dices -->
     
-    <string name="tx_general_settings">General</string>
-    <string name="tx_lifecounter_caption">Life points</string>
-    <string name="tx_description_username">User name</string>
-    <string name="tx_description_password">Password</string>
-    <string name="tx_description_re_password">retype password</string>
-      
-    <!-- Layoutspezifische Texte -->
-    
-    <!-- Wuerfel -->
   	<string name="tx_dices_result">Result</string>
-  	
-  	<!-- Preferences -->    
-    <string name="cb_settings_disable_screen_lock">No screen lock</string>
-    <string name="cb_settings_disable_screen_lock_summary">Preventing screen from locking</string>
-    <string name="cb_settings_enable_two_player_mode">2 player mode</string>
-    <string name="cb_settings_enable_two_player_mode_summary">Using the app for two players</string>
-    <string name="cb_settings_default_lifepoints">Life points</string>
-    <string name="cb_settings_default_lifepoints_summary">Setting the default life points</string>
   	
   	 
 </resources>
