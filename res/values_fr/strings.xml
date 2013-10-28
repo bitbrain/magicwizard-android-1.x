@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- General -->
+    
+    <string name="app_description">Cette application sert à compter les points et les compteurs de poisons pour le jeu \"Magic: l'assemblée\".\n
+                                   \nCette application a été développée par Miguel Gonzalez.\n
+                                   \n</string>
+    <string name="app_tipp">Astuce: Glisser de gauche à droite pour ouvrir le menu \"nouveau\"</string>
+    
+    <!-- Menu -->    
+    
+    <string name="opt_info">Information</string>
+    <string name="opt_warning">Avertissement!!</string> 
+    <string name="txt_quit">Fermer</string>
+    <string name="opt_startup">Ne plus afficher à chaque démarrage</string>
+    
+    <!-- Buttons -->
+    
+    <string name="sf_ok">OK</string>
+    <string name="sf_abort">Annuler</string>
+    
+    <!-- Dices -->
+    
+    <string name="tx_dices_result">Résultat</string>
+  	
+  	 
+</resources>
+
