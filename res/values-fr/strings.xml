@@ -3,7 +3,7 @@
     
     <!-- General -->
     
-    <string name="app_description">Cette application sert à compter les points et les compteurs de poisons pour le jeu \"Magic: l'assemblée\".\n
+    <string name="app_description">Cette application sert à compter les points et les compteurs de poisons pour le jeu \"Magic: l\'assemblée\".\n
                                    \nCette application a été développée par Miguel Gonzalez.\n
                                    \n</string>
     <string name="app_tipp">Astuce: Glisser de gauche à droite pour ouvrir le menu \"nouveau\"</string>
