@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- General -->
+    
+    <string name="app_description">Esta herramienta está escrito para contar los puntos de vida y los contadores de veneno para el juego \"Magic - The Gathering\".\n
+                                   \nEsta aplicación ha sido desarrollada por Miguel González.\n
+                                   \n</string>
+           <string name="app_tipp">Tipp: Pase de izquierda a derecha para abrir el nuevo menú!</string>
+    
+    <!-- Menu -->    
+    
+    <string name="opt_info">información</string>
+    <string name="opt_warning">advertencia</string> 
+    <string name="txt_quit">cerrar</string>
+    <string name="opt_startup">No volver a mostrar el siguiente inicio</string>
+    
+    <!-- Buttons -->
+    
+    <string name="sf_ok">OK</string>
+    <string name="sf_abort">abortar</string>
+    
+    <!-- Dices -->
+    
+          <string name="tx_dices_result">resultar</string>
+          
+           
+</resources>
