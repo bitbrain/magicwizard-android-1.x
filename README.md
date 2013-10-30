@@ -21,6 +21,10 @@ To work on this project, you will need:
 * [Android SDK](http://developer.android.com/sdk/index.html) including ADT
 * [SlidingMenu](https://github.com/jfeinstein10/SlidingMenu) library on GitHub
 
+**Hint**: Don't use the [ADT bundle](http://developer.android.com/sdk/index.html) of Google, because it doesn't fit with with Indigo yet and [causes strange errors](https://github.com/MyRealityCoding/magicwizard-android/issues/11).
+
+#### Sliding Menu
+
 To configure the sliding menu, download the code (or fork it via git). Afterwards you open Eclipse and follow the steps:
 
 1. Go to ```File -> New -> Others..```
