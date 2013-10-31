@@ -32,6 +32,8 @@ To configure the sliding menu, download the code (or fork it via git). Afterward
 3. Select the ```library``` folder of the downloaded sliding menu project
 4. Click ```finish```
 
+**Hint**: Put the ```SlidingMenu``` folder in the same folder where the ```magicwizard-android``` folder is. Then you won't have to change the library's path in the project settings.
+
 Everything complete? Then you should know, that you can fork this repository on order to make improvements! Just go on and make a pull request. Maybe it has a chance to get approved!
 
 #### Linux hint
